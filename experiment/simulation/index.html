@@ -1,13 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/barecss@1.1.1/css/bare.min.css"> -->
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Numerical Integration for π using MPI</title>
 </head>
 <body>
-		<!-- Your code goes here-->
+  <header>
+    <h1>Numerical Integration for π using MPI</h1>
+  </header>
+  <section class="control-panel">
+    <label for="numProcesses">Number of Processes:</label>
+    <input type="range" id="numProcesses" min="1" max="8" step="1" value="2">
+    <span id="numProcessesValue">2</span>
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
+    <label for="numSubIntervals">Number of Subintervals:</label>
+    <input type="range" id="numSubIntervals" min="10" max="200" step="10" value="50">
+    <span id="numSubIntervalsValue">50</span>
+
+    <button id="startButton">Start Calculation</button>
+    <button id="resetButton">Reset</button>
+  </section>
+
+	<div id="process-controls">
+		<h3>Process Controls</h3>
+		<!-- Controls for each process will be dynamically added here -->
+	</div>
+
+  <section class="canvas-container">
+    <canvas id="integrationCanvas" width="800" height="400"></canvas>
+  </section>
+
+	<progress id="progressBar" value="0" max="100"></progress>
+
+  <section class="results">
+    <h3>Results</h3>
+    <p>Approximated Pi: <span id="approximatedPi">0</span></p>
+    <p>Computation Time: <span id="computationTime">0</span> ms</p>
+  </section>
+
+	<div id="metrics">
+		<h3>Computation Efficiency Metrics</h3>
+		<p id="speedup">Speedup: N/A</p>
+		<p id="efficiency">Efficiency: N/A</p>
+		<div id="process-times">
+			<h4>Time per Process:</h4>
+			<!-- Individual process times will be added here dynamically -->
+		</div>
+	</div>
+
+  <section class="questions">
+    <h3>Understanding Questions</h3>
+    <div id="questionContainer">
+      <!-- Questions will be dynamically inserted here -->
+    </div>
+  </section>
+
+  <script src="./js/main.js"></script>
 </body>
 </html>
