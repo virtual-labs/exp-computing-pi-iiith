@@ -1,0 +1,16 @@
+
+/home/runner/work/exp-computing-pi-iiith/exp-computing-pi-iiith/experiment/simulation/js/main.js
+   33:5   warning  'simulation' is assigned a value but never used        no-unused-vars
+   52:5   warning  'intervals' is assigned a value but never used         no-unused-vars
+   61:5   warning  'processPromises' is assigned a value but never used   no-unused-vars
+   63:5   warning  'pausedProcess' is assigned a value but never used     no-unused-vars
+  150:7   warning  'promises' is assigned a value but never used          no-unused-vars
+  163:9   warning  'processStartTime' is assigned a value but never used  no-unused-vars
+  166:37  warning  Promise executor functions should not be async         no-async-promise-executor
+  261:3   warning  'processResults' is not defined                        no-undef
+  261:35  warning  Promise executor functions should not be async         no-async-promise-executor
+  265:13  warning  'result' is not defined                                no-undef
+  280:7   warning  'totalProcessTime' is assigned a value but never used  no-unused-vars
+
+✖ 11 problems (0 errors, 11 warnings)
+

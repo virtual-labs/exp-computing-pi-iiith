@@ -1,0 +1,100 @@
+/* Basic Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f4f4;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+.control-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+label {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+input[type="range"] {
+  width: 300px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.canvas-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+#integrationCanvas {
+  border: 1px solid black;
+  background-color: #ffffff;
+}
+
+.results {
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+.questions {
+  margin-top: 30px;
+  width: 80%;
+  max-width: 700px;
+}
+
+.question-item {
+  margin-top: 15px;
+}
+
+.question-item span {
+  font-weight: bold;
+}
+
+
+
+#metrics {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+}
+
+#metrics h3, #metrics h4 {
+  color: #333;
+}
+
+#metrics p {
+  font-size: 14px;
+}
+
+#process-times {
+  margin-top: 10px;
+}
+
+#process-times div {
+  font-size: 12px;
+}

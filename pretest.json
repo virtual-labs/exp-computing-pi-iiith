@@ -1,0 +1,158 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "What is MPI commonly used for in distributed systems?",
+      "answers": {
+        "a": "Managing a shared memory space among distributed nodes",
+        "b": "Enabling message-passing between processes on different nodes",
+        "c": "Controlling hardware directly on a single machine",
+        "d": "Providing a standard library for building graphical user interfaces"
+      },
+      "explanations": {
+        "a": "Incorrect. MPI does not manage shared memory but handles message-passing.",
+        "b": "Correct. MPI is designed for message-passing between processes in distributed systems.",
+        "c": "Incorrect. MPI operates on a higher level and doesn't control hardware directly.",
+        "d": "Incorrect. MPI is unrelated to GUI development."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which MPI operation would you use to send data from one process to another specific process?",
+      "answers": {
+        "a": "MPI_Bcast",
+        "b": "MPI_Reduce",
+        "c": "MPI_Send",
+        "d": "MPI_Gather"
+      },
+      "explanations": {
+        "a": "Incorrect. MPI_Bcast broadcasts data from one process to all other processes.",
+        "b": "Incorrect. MPI_Reduce aggregates data across processes.",
+        "c": "Correct. MPI_Send is used for sending data directly from one process to another.",
+        "d": "Incorrect. MPI_Gather collects data from multiple processes."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which MPI operation would you use to broadcast a variable from one process to all other processes?",
+      "answers": {
+        "a": "MPI_Send",
+        "b": "MPI_Recv",
+        "c": "MPI_Bcast",
+        "d": "MPI_Reduce"
+      },
+      "explanations": {
+        "a": "Incorrect. MPI_Send is for point-to-point communication, not broadcasting.",
+        "b": "Incorrect. MPI_Recv is for receiving messages in point-to-point communication.",
+        "c": "Correct. MPI_Bcast broadcasts data from one process to all others in a communicator.",
+        "d": "Incorrect. MPI_Reduce aggregates values across processes, not broadcasting."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "In a distributed MPI program, how would you typically aggregate partial results from all nodes?",
+      "answers": {
+        "a": "Using MPI_Bcast",
+        "b": "Using MPI_Scatter",
+        "c": "Using MPI_Reduce",
+        "d": "Using MPI_Cart_create"
+      },
+      "explanations": {
+        "a": "Incorrect. MPI_Bcast sends data from one process to all others.",
+        "b": "Incorrect. MPI_Scatter distributes different parts of data to processes.",
+        "c": "Correct. MPI_Reduce combines results from all processes.",
+        "d": "Incorrect. MPI_Cart_create defines a communication topology."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which of the following is a benefit of using non-blocking operations like MPI_Isend and MPI_Irecv in MPI?",
+      "answers": {
+        "a": "They allow overlapping communication with computation",
+        "b": "They synchronize all processes simultaneously",
+        "c": "They require fewer resources than blocking operations",
+        "d": "They improve error handling for distributed systems"
+      },
+      "explanations": {
+        "a": "Correct. Non-blocking operations enable computation to proceed while communication is pending.",
+        "b": "Incorrect. Non-blocking operations do not perform synchronization.",
+        "c": "Incorrect. Non-blocking operations can require careful resource management.",
+        "d": "Incorrect. Non-blocking operations do not specifically enhance error handling."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Why is domain decomposition important in distributed systems?",
+      "answers": {
+        "a": "It prevents nodes from communicating with each other",
+        "b": "It allows the problem to be split into parts processed independently",
+        "c": "It reduces the need for inter-process communication",
+        "d": "It ensures that all nodes have the same data"
+      },
+      "explanations": {
+        "a": "Incorrect. Domain decomposition involves communication between nodes.",
+        "b": "Correct. Domain decomposition allows each process to handle a part of the problem.",
+        "c": "Incorrect. While it may reduce communication, that is not its main purpose.",
+        "d": "Incorrect. Nodes typically work on different parts of the problem, not identical data."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which of the following is a common challenge in distributed systems for computing π?",
+      "answers": {
+        "a": "Ensuring all processes share a common memory space",
+        "b": "Maintaining precise synchronization across processes",
+        "c": "Storing the entire dataset on each node",
+        "d": "Avoiding any use of network resources"
+      },
+      "explanations": {
+        "a": "Incorrect. Distributed systems do not use shared memory across nodes.",
+        "b": "Correct. Synchronization can be challenging in distributed systems.",
+        "c": "Incorrect. Nodes usually handle parts of the data independently.",
+        "d": "Incorrect. Communication over a network is essential in distributed systems."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Which MPI function would be used to define a grid topology for processes?",
+      "answers": {
+        "a": "MPI_Bcast",
+        "b": "MPI_Comm_rank",
+        "c": "MPI_Gather",
+        "d": "MPI_Cart_create"
+      },
+      "explanations": {
+        "a": "Incorrect. MPI_Bcast broadcasts data to all processes.",
+        "b": "Incorrect. MPI_Comm_rank retrieves the process rank.",
+        "c": "Incorrect. MPI_Gather collects data from all processes.",
+        "d": "Correct. MPI_Cart_create creates a process grid for communication."
+      },
+      "correctAnswer": "d",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "What is a benefit of using the Monte Carlo method to compute π in a distributed system?",
+      "answers": {
+        "a": "It requires no random numbers for approximation",
+        "b": "It provides an exact value of π",
+        "c": "It is easily parallelizable and can handle failures gracefully",
+        "d": "It is unaffected by the number of samples used"
+      },
+      "explanations": {
+        "a": "Incorrect. The Monte Carlo method uses random sampling.",
+        "b": "Incorrect. The Monte Carlo method approximates π, not providing an exact value.",
+        "c": "Correct. Monte Carlo is suitable for parallel computation and can adapt to node failure.",
+        "d": "Incorrect. More samples generally improve the accuracy of the result."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    }
+  ]
+}

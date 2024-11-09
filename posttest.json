@@ -1,0 +1,175 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "What is the primary benefit of using MPI for distributed computation?",
+      "answers": {
+        "a": "To increase program execution time",
+        "b": "To decrease computation costs",
+        "c": "To enable processes to communicate and coordinate efficiently",
+        "d": "To simplify the code structure by reducing the number of processes"
+      },
+      "explanations": {
+        "a": "Incorrect. MPI is used to decrease execution time by distributing tasks.",
+        "b": "Partially correct. MPI helps in optimizing computation, but its main advantage is efficient communication among distributed processes.",
+        "c": "Correct. MPI enables efficient communication and coordination among distributed processes.",
+        "d": "Incorrect. MPI increases complexity but improves parallel processing capability."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "In the context of this experiment, what does each process compute?",
+      "answers": {
+        "a": "A specific range of trapezoidal areas under the curve",
+        "b": "The entire integral individually",
+        "c": "A part of the communication overhead",
+        "d": "The final value of π"
+      },
+      "explanations": {
+        "a": "Correct. Each process computes trapezoidal areas over its assigned range.",
+        "b": "Incorrect. Each process only computes a section of the integral.",
+        "c": "Incorrect. Communication overhead is managed by MPI, not each process individually.",
+        "d": "Incorrect. The final value of π is obtained after aggregating results from all processes."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What happens to the efficiency of computation if one of the processes is paused?",
+      "answers": {
+        "a": "Efficiency increases",
+        "b": "Efficiency decreases",
+        "c": "Efficiency remains the same",
+        "d": "The program completes faster"
+      },
+      "explanations": {
+        "a": "Incorrect. Pausing a process reduces efficiency as it adds delay.",
+        "b": "Correct. Pausing a process decreases efficiency due to increased waiting time.",
+        "c": "Incorrect. Efficiency is affected by delays in process completion.",
+        "d": "Incorrect. Pausing a process does not make the program faster."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "How is speedup calculated in this experiment?",
+      "answers": {
+        "a": "By dividing the multi-process time by the single-process time",
+        "b": "By summing up individual process times",
+        "c": "By dividing the single-process time by the multi-process time",
+        "d": "By multiplying single-process and multi-process times"
+      },
+      "explanations": {
+        "a": "Incorrect. Speedup is the inverse of this calculation.",
+        "b": "Incorrect. Speedup is not calculated by summing process times.",
+        "c": "Correct. Speedup is calculated by dividing single-process time by multi-process time.",
+        "d": "Incorrect. Multiplying times does not give speedup."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What does efficiency represent in a distributed system?",
+      "answers": {
+        "a": "The total time taken by all processes combined",
+        "b": "The average time taken by a single process",
+        "c": "How effectively each process contributes to the total speedup",
+        "d": "The time saved by having multiple processes paused"
+      },
+      "explanations": {
+        "a": "Incorrect. Efficiency represents process contribution to speedup, not total time.",
+        "b": "Incorrect. Efficiency is not based on average time.",
+        "c": "Correct. Efficiency measures the contribution of each process to speedup.",
+        "d": "Incorrect. Efficiency would decrease if processes were paused."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Why might MPI be useful for large computations like finding π to high precision?",
+      "answers": {
+        "a": "MPI minimizes the need for parallelism",
+        "b": "MPI uses shared memory to store results",
+        "c": "MPI allows for splitting the computation across multiple processors",
+        "d": "MPI automatically corrects errors in computation"
+      },
+      "explanations": {
+        "a": "Incorrect. MPI is specifically designed for parallelism.",
+        "b": "Incorrect. MPI does not rely on shared memory but distributed memory.",
+        "c": "Correct. MPI enables dividing large tasks across processors to increase efficiency.",
+        "d": "Incorrect. MPI does not automatically correct errors."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What role does MPI’s 'Reduce' function play in this experiment?",
+      "answers": {
+        "a": "It distributes the data to multiple processes",
+        "b": "It combines results from all processes to produce a final output",
+        "c": "It checks the time taken by each process",
+        "d": "It isolates each process’s computation"
+      },
+      "explanations": {
+        "a": "Incorrect. Reduce does not distribute data but aggregates it.",
+        "b": "Correct. Reduce aggregates the results from processes to a single output.",
+        "c": "Incorrect. Reduce is not involved in timing.",
+        "d": "Incorrect. Reduce does not isolate but combines results."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "How does MPI manage communication between processes in this experiment?",
+      "answers": {
+        "a": "Using shared variables accessible by all processes",
+        "b": "Using message-passing functions like send and receive",
+        "c": "Using global variables updated by each process",
+        "d": "Using a single thread that coordinates tasks"
+      },
+      "explanations": {
+        "a": "Incorrect. MPI uses message passing, not shared variables.",
+        "b": "Correct. MPI uses message-passing functions to coordinate processes.",
+        "c": "Incorrect. MPI does not rely on global variables.",
+        "d": "Incorrect. MPI relies on parallel processes, not a single thread."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What impact does increasing the number of processes have on computation time?",
+      "answers": {
+        "a": "It always decreases computation time linearly",
+        "b": "It initially decreases computation time but may not scale linearly due to overhead",
+        "c": "It has no effect on computation time",
+        "d": "It increases computation time due to process coordination overhead"
+      },
+      "explanations": {
+        "a": "Incorrect. Computation time does not always decrease linearly.",
+        "b": "Correct. Increasing processes reduces time initially, but overhead may limit gains.",
+        "c": "Incorrect. More processes usually affect computation time.",
+        "d": "Incorrect. More processes usually decrease time, though some overhead is present."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "What is a key challenge when implementing distributed computing algorithms like this one using MPI?",
+      "answers": {
+        "a": "Ensuring all processes have access to shared memory",
+        "b": "Managing data distribution and synchronization between processes",
+        "c": "Avoiding use of multiple processors",
+        "d": "Simplifying code by reducing the number of communication calls"
+      },
+      "explanations": {
+        "a": "Incorrect. MPI works without shared memory, using message passing.",
+        "b": "Correct. Data distribution and synchronization are critical in MPI.",
+        "c": "Incorrect. MPI is used specifically for multi-processor systems.",
+        "d": "Incorrect. MPI often requires many communication calls to coordinate."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    }
+  ]
+}
