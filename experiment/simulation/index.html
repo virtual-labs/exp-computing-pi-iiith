@@ -20,40 +20,30 @@
     <div class="v-collapsible-instruction-container v-instruction-container">
       <div class="v-collapsible is-size-5">Instructions</div>
       <div class="v-content" style="text-align: left; padding-left: 10%; padding-right: 10%;">
-        <p>
-          This experiment simulates a distributed system with multiple processes working together to
-          compute <code>π</code> using the trapezoidal rule for numerical integration. The trapezoidal
-          rule is a method for approximating the definite integral of a function by dividing the interval
-          into subintervals and approximating the area under the curve using trapezoids. In this
-          experiment, the function used is <code>y = √(1 - x²)</code>, which represents a quarter of a
-          circle with radius <code>1</code>. The area under the curve in the interval <code>[0, 1]</code>
-          is used to approximate the value of <code>π</code>. The experiment demonstrates how multiple
-          processes can work together to compute the integral and approximate <code>π</code> more efficiently
-          than a single process.
-        </p>
-        <p>...</p>
         <ul style="list-style: disc;">
           <li>
             <strong>Setup Parameters:</strong>
             <ul style="list-style: circle;">
               <li>
-                Locate the "Number of Processes" slider in the <strong>Control Panel</strong>. This control
-                sets how many processes (simulated processors) will divide and compute the trapezoidal areas.
-                Adjust the slider between <code>1</code> and <code>8</code> processes.
+                <strong>Number of Processes</strong>:
+                Sets how many processes (simulated processors) will divide and compute the trapezoidal areas.
               </li>
               <li>
-                Adjust the "Number of Subintervals" slider to set the precision of the computation. This
-                control sets the number of intervals the function will be divided into, which impacts the
-                accuracy of <code>π</code> computation.
+                <strong>Number of Subintervals</strong>: Set the precision of the computation, i.e., the
+                number of intervals the function will be divided into, which impacts the accuracy of
+                <code>π</code> computation.
               </li>
             </ul>
           </li>
+        </ul>
+        <p>...</p>
+        <ul style="list-style: disc;">
           <li>
             <strong>Initialize the Experiment:</strong>
             <ul style="list-style: circle;">
               <li>
-                After setting the desired number of processes and subintervals, click the <strong>"Start
-                Calculation"</strong> button to begin.
+                After setting the desired number of processes and subintervals, click <strong>Start
+                Calculation</strong> to begin.
               </li>
               <li>
                 The animation will display trapezoids being computed by each process within a visual representation
@@ -95,6 +85,7 @@
         </ul>
         <p>...</p>
         <p>
+          For more details on the experiment, please refer to <strong>Procedure</strong>.
           The posttest quiz will evaluate your observations and understanding of the experiment. Please take
           note of the posttest questions to ensure you capture the relevant details during the experiment.
         </p>
