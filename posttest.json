@@ -1,0 +1,175 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "With 2 processes and 50 intervals, what is the estimated values of π?",
+      "answers": {
+        "a": "3.142",
+        "b": "3.140",
+        "c": "3.138",
+        "d": "3.136"
+      },
+      "explanations": {
+        "a": "Incorrect. This is the correct value of π to 3 decimal places.",
+        "b": "You are close. The observed value is lower.",
+        "c": "Correct. This is the estimated value of π with 2 processes and 50 intervals.",
+        "d": "You are close. The observed value is higher."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "With 2 processes and 50 intervals, what is the wall-clock time and process time?",
+      "answers": {
+        "a": "70 seconds, 140 seconds",
+        "b": "25 seconds, 50 seconds",
+        "c": "10 seconds, 20 seconds",
+        "d": "25 seconds, 100 seconds"
+      },
+      "explanations": {
+        "a": "Incorrect. This wall-clock time is too high for 2 processes.",
+        "b": "Correct. This is the wall-clock and process time with 2 processes and 50 intervals.",
+        "c": "Incorrect. This wall-clock time is too low for 2 processes.",
+        "d": "Incorrect. This is not a valid combination of wall-clock and process time for 2 processes."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "With 5 processes and 50 intervals, what is the computed value of π?",
+      "answers": {
+        "a": "3.142",
+        "b": "3.140",
+        "c": "3.138",
+        "d": "3.136"
+      },
+      "explanations": {
+        "a": "Incorrect. Change in the number of processes does not affect the value of π.",
+        "b": "Incorrect. Change in the number of processes does not affect the value of π.",
+        "c": "Correct. Change in the number of processes does not affect the value of π.",
+        "d": "Incorrect. Change in the number of processes does not affect the value of π."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "With 5 processes and 50 intervals, what is the wall-clock time and process time?",
+      "answers": {
+        "a": "5 seconds, 25 seconds",
+        "b": "25 seconds, 50 seconds",
+        "c": "10 seconds, 20 seconds",
+        "d": "10 seconds, 50 seconds"
+      },
+      "explanations": {
+        "a": "Incorrect. This wall-clock time is too low for 5 processes.",
+        "b": "Incorrect. This is not a valid combination of wall-clock and process time for 5 processes.",
+        "c": "Incorrect. This is not a valid combination of wall-clock and process time for 5 processes.",
+        "d": "Correct. This is the wall-clock and process time with 5 processes and 50 intervals."
+      },
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "With 5 processes and 100 intervals, what is the computed value of π?",
+      "answers": {
+        "a": "3.142",
+        "b": "3.140",
+        "c": "3.138",
+        "d": "3.136"
+      },
+      "explanations": {
+        "a": "You are close. This is the correct value of π to 3 decimal places.",
+        "b": "Correct. Increase in intervals increases precision of π.",
+        "c": "You are close. The observed value is higher, due to increased intervals.",
+        "d": "Incorrect. Increasing intervals increases precision of π."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "With 2 processes and 100 intervals, and with both processes having a speed of 4, what is the wall-clock time and process time?",
+      "answers": {
+        "a": "20 seconds, 50 seconds",
+        "b": "10 seconds, 20 seconds",
+        "c": "45 seconds, 90 seconds",
+        "d": "15 seconds, 30 seconds"
+      },
+      "explanations": {
+        "a": "Incorrect. This is not a valid combination of wall-clock and process time for 2 processes.",
+        "b": "Incorrect. This is too low for 2 processes and 100 intervals, with speed 4.",
+        "c": "Incorrect. This is too high for 2 processes and 100 intervals, with speed 4.",
+        "d": "Correct. This is the wall-clock and process time for 2 processes and 100 intervals, with speed 4."
+      },
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "With 2 processes and 100 intervals, and with only one process having a speed of 4, what is the wall-clock time and process time?",
+      "answers": {
+        "a": "50 seconds, 65 seconds",
+        "b": "50 seconds, 100 seconds",
+        "c": "25 seconds, 50 seconds",
+        "d": "40 seconds, 75 seconds"
+      },
+      "explanations": {
+        "a": "Correct. This is the wall-clock and process time for 2 processes and 100 intervals, with one process at speed 4.",
+        "b": "Incorrect. One process is faster, so the wall-clock time is less than 100 seconds.",
+        "c": "Incorrect. This is too low for 2 processes and 100 intervals, with one process at speed 4.",
+        "d": "Incorrect. This is close but the process time is too high."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Why might MPI be useful for large computations like finding π to high precision?",
+      "answers": {
+        "a": "MPI minimizes the need for parallelism",
+        "b": "MPI uses shared memory to store results",
+        "c": "MPI allows for splitting the computation across multiple processors",
+        "d": "MPI automatically corrects errors in computation"
+      },
+      "explanations": {
+        "a": "Incorrect. MPI is specifically designed for parallelism.",
+        "b": "Incorrect. MPI does not rely on shared memory but distributed memory.",
+        "c": "Correct. MPI enables dividing large tasks across processors to increase efficiency.",
+        "d": "Incorrect. MPI does not automatically correct errors."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What impact does increasing the number of processes have on computation time?",
+      "answers": {
+        "a": "It always decreases computation time linearly",
+        "b": "It initially decreases computation time but may not scale linearly due to overhead",
+        "c": "It has no effect on computation time",
+        "d": "It increases computation time due to process coordination overhead"
+      },
+      "explanations": {
+        "a": "Incorrect. Computation time does not always decrease linearly.",
+        "b": "Correct. Increasing processes reduces time initially, but overhead may limit gains.",
+        "c": "Incorrect. More processes usually affect computation time.",
+        "d": "Incorrect. More processes usually decrease time, though some overhead is present."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "What is a key challenge when implementing distributed computing algorithms like this one using MPI?",
+      "answers": {
+        "a": "Ensuring all processes have access to shared memory",
+        "b": "Managing data distribution and synchronization between processes",
+        "c": "Avoiding use of multiple processors",
+        "d": "Simplifying code by reducing the number of communication calls"
+      },
+      "explanations": {
+        "a": "Incorrect. MPI works without shared memory, using message passing.",
+        "b": "Correct. Data distribution and synchronization are critical in MPI.",
+        "c": "Incorrect. MPI is used specifically for multi-processor systems.",
+        "d": "Incorrect. MPI often requires many communication calls to coordinate."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+
+/home/runner/work/exp-computing-pi-iiith/exp-computing-pi-iiith/experiment/simulation/js/main.js
+   21:7   warning  'EQUIZ' is assigned a value but never used  no-unused-vars
+  213:10  warning  'drawTrapezoids' is defined but never used  no-unused-vars
+  293:12  warning  'p' is already defined                      no-redeclare
+
+✖ 3 problems (0 errors, 3 warnings)
+
