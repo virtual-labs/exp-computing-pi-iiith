@@ -16,7 +16,15 @@ In practical terms, only 39 digits of `π` are necessary to calculate a circle a
 
 Many algorithms approximate `π` with varying trade-offs in terms of convergence rate, precision, and computational efficiency, particularly regarding parallelization. Below are some key methods commonly used for approximating `π`:
 
-1. **Monte Carlo Method**: The Monte Carlo method leverages random sampling and probability to approximate `π`. By simulating points randomly within a square that encloses a quarter-circle, one can estimate `π` by calculating the ratio of points inside the quarter-circle to the total points in the square. Specifically, if points are uniformly distributed, the ratio approaches `π/4` as the number of points increases. Monte Carlo is particularly suited for parallel computation since random points can be generated and evaluated independently.
+1. **Monte Carlo Method**: The Monte Carlo method is a computational algorithm that relies on repeated random sampling to obtain numerical results. The underlying concept is to use randomness to solve problems that might be deterministic in principle. They are often used in physical and mathematical problems and are most useful when it is difficult or impossible to use other approaches. Monte Carlo methods are mainly used in three problem classes: optimization, numerical integration, and generating draws from a probability distribution.
+
+To estimate the value of Pi, we can use the Monte Carlo method. Imagine a square with side length 2r, centered at the origin. A circle with radius r is inscribed within this square. The area of the square is (2r)^2 = 4r^2, and the area of the circle is πr^2. The ratio of the area of the circle to the area of the square is (πr^2) / (4r^2) = π/4.
+
+If we randomly generate a large number of points within the square, the ratio of the number of points that fall inside the circle to the total number of points generated should be approximately equal to the ratio of the areas, which is π/4.
+
+So, if we generate N points, and M of them fall inside the circle, then M/N ≈ π/4, which means π ≈ 4 * (M/N).
+
+In this experiment, we will simulate this process to estimate the value of Pi.
 
 2. **Madhava–Leibniz Series**: The Madhava–Leibniz series is an infinite series representation: $\frac{\pi}{4} = \sum\limits_{k=0}^{\infty} \frac{(-1)^k}{2k + 1}$. While conceptually simple and derived from the arctangent Taylor series, this series converges slowly, requiring millions of terms to achieve modest precision. Although parallelization can be applied by splitting terms across processors, the slow convergence makes it inefficient for high-precision calculations.
 
