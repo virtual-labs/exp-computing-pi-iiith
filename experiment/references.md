@@ -5,3 +5,5 @@
 - [Leibniz formula for π](https://en.wikipedia.org/wiki/Leibniz_formula_for_π)
 - [Chudnovsky algorithm](https://en.wikipedia.org/wiki/Chudnovsky_algorithm)
 - [The Chudnovsky Algorithm for Calculating Pi (π)](https://observablehq.com/@galopin/the-chudnovsky-algorithm-for-calculating-pi)
+- [The Monte Carlo Method](https://en.wikipedia.org/wiki/Monte_Carlo_method)
+- [Approximating Pi with the Monte Carlo method](https://www.geeksforgeeks.org/estimating-the-value-of-pi-using-monte-carlo/)

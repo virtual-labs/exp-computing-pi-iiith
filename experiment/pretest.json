@@ -153,6 +153,105 @@
       },
       "correctAnswer": "c",
       "difficulty": "intermediate"
+    },
+    {
+      "question": "What is the formula for the area of a square with side length 's'?",
+      "options": [
+        "s^2",
+        "2s",
+        "4s",
+        "s"
+      ],
+      "answer": "s^2",
+      "level": "easy"
+    },
+    {
+      "question": "What is the formula for the area of a circle with radius 'r'?",
+      "options": [
+        "πr^2",
+        "2πr",
+        "πr",
+        "2r"
+      ],
+      "answer": "πr^2",
+      "level": "easy"
+    },
+    {
+      "question": "What does Pi (π) represent?",
+      "options": [
+        "The ratio of a circle's circumference to its diameter",
+        "The area of a circle",
+        "The circumference of a circle",
+        "The diameter of a circle"
+      ],
+      "answer": "The ratio of a circle's circumference to its diameter",
+      "level": "easy"
+    },
+    {
+      "question": "What is the fundamental idea behind the Monte Carlo method?",
+      "options": [
+        "Using random sampling to obtain numerical results",
+        "Solving equations algebraically",
+        "Using calculus to find areas",
+        "Measuring physical objects"
+      ],
+      "answer": "Using random sampling to obtain numerical results",
+      "level": "intermediate"
+    },
+    {
+      "question": "If you throw a dart at a board, what does the probability of hitting a certain area depend on?",
+      "options": [
+        "The size of the area",
+        "The color of the area",
+        "The position of the area",
+        "The shape of the area"
+      ],
+      "answer": "The size of the area",
+      "level": "intermediate"
+    },
+    {
+      "question": "In the experiment, the ratio of points inside the circle to the total points is an approximation of what?",
+      "options": [
+        "The ratio of the circle's area to the square's area",
+        "The value of Pi",
+        "The area of the circle",
+        "The area of the square"
+      ],
+      "answer": "The ratio of the circle's area to the square's area",
+      "level": "intermediate"
+    },
+    {
+      "question": "How does the number of random points generated affect the accuracy of the estimated value of Pi?",
+      "options": [
+        "More points generally lead to a more accurate estimation",
+        "Fewer points generally lead to a more accurate estimation",
+        "The number of points does not affect the accuracy",
+        "The accuracy depends on the size of the points"
+      ],
+      "answer": "More points generally lead to a more accurate estimation",
+      "level": "advanced"
+    },
+    {
+      "question": "If 1000 points are generated and 785 fall inside the circle, what is the estimated value of Pi?",
+      "options": [
+        "3.14",
+        "3.14159",
+        "3.142",
+        "3.1"
+      ],
+      "answer": "3.14",
+      "level": "advanced"
+    },
+    {
+      "question": "Besides calculating Pi, what is another potential application of the Monte Carlo method?",
+      "options": [
+        "Simulating financial markets",
+        "Solving quadratic equations",
+        "Building a bridge",
+        "Baking a cake"
+      ],
+      "answer": "Simulating financial markets",
+      "level": "advanced"
     }
   ]
 }

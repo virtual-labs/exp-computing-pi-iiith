@@ -170,6 +170,105 @@
       },
       "correctAnswer": "b",
       "difficulty": "advanced"
+    },
+    {
+      "question": "What is the relationship between the radius and diameter of a circle?",
+      "options": [
+        "The diameter is twice the radius",
+        "The radius is twice the diameter",
+        "The radius and diameter are equal",
+        "The diameter is half the radius"
+      ],
+      "answer": "The diameter is twice the radius",
+      "level": "easy"
+    },
+    {
+      "question": "If a square has a side length of 4 units, what is its area?",
+      "options": [
+        "16 square units",
+        "8 square units",
+        "12 square units",
+        "4 square units"
+      ],
+      "answer": "16 square units",
+      "level": "easy"
+    },
+    {
+      "question": "The value of Pi is approximately...",
+      "options": [
+        "3.14159",
+        "2.71828",
+        "1.61803",
+        "1.41421"
+      ],
+      "answer": "3.14159",
+      "level": "easy"
+    },
+    {
+      "question": "Why is the Monte Carlo method considered a probabilistic method?",
+      "options": [
+        "Because it uses random numbers to find a solution",
+        "Because it always gives the exact same answer",
+        "Because it is a very old method",
+        "Because it was invented by a gambler"
+      ],
+      "answer": "Because it uses random numbers to find a solution",
+      "level": "intermediate"
+    },
+    {
+      "question": "In the context of the Pi experiment, what does a point being 'inside the circle' mean?",
+      "options": [
+        "Its distance from the center is less than the radius",
+        "Its distance from the center is greater than the radius",
+        "Its distance from the center is equal to the radius",
+        "It is colored red"
+      ],
+      "answer": "Its distance from the center is less than the radius",
+      "level": "intermediate"
+    },
+    {
+      "question": "If the area of the square is 4 and the area of the inscribed circle is π, what is the ratio of the areas?",
+      "options": [
+        "π/4",
+        "4/π",
+        "π",
+        "4"
+      ],
+      "answer": "π/4",
+      "level": "intermediate"
+    },
+    {
+      "question": "If you run the experiment twice with 1000 points each time, would you expect to get the exact same estimate for Pi? Why?",
+      "options": [
+        "No, because the points are generated randomly each time",
+        "Yes, because the number of points is the same",
+        "Yes, because the formula for Pi is constant",
+        "No, because the computer makes errors"
+      ],
+      "answer": "No, because the points are generated randomly each time",
+      "level": "advanced"
+    },
+    {
+      "question": "If you wanted to estimate the value of Pi to a very high degree of accuracy using this method, what would you need to do?",
+      "options": [
+        "Generate a very large number of points",
+        "Use a very small number of points",
+        "Use a faster computer",
+        "Use a different shape instead of a circle"
+      ],
+      "answer": "Generate a very large number of points",
+      "level": "advanced"
+    },
+    {
+      "question": "Imagine you have a 3D sphere inscribed in a cube. How could you adapt the Monte Carlo method to estimate Pi?",
+      "options": [
+        "Generate random points in the cube and find the ratio of points inside the sphere to the total points",
+        "It's not possible to use the Monte Carlo method in 3D",
+        "Draw a 2D projection and use the same method",
+        "Count the vertices of the cube and sphere"
+      ],
+      "answer": "Generate random points in the cube and find the ratio of points inside the sphere to the total points",
+      "level": "advanced"
     }
   ]
 }
