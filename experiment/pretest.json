@@ -2,256 +2,157 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "What is MPI commonly used for in distributed systems?",
+      "question": "What is the formula for the area of a square with side length 's'?",
       "answers": {
-        "a": "Managing a shared memory space among distributed nodes",
-        "b": "Enabling message-passing between processes on different nodes",
-        "c": "Controlling hardware directly on a single machine",
-        "d": "Providing a standard library for building graphical user interfaces"
+        "a": "s^2",
+        "b": "2s",
+        "c": "4s",
+        "d": "s"
       },
       "explanations": {
-        "a": "Incorrect. MPI does not manage shared memory but handles message-passing.",
-        "b": "Correct. MPI is designed for message-passing between processes in distributed systems.",
-        "c": "Incorrect. MPI operates on a higher level and doesn't control hardware directly.",
-        "d": "Incorrect. MPI is unrelated to GUI development."
+        "a": "Correct. The area of a square is the side length squared.",
+        "b": "Incorrect. This is the formula for the perimeter of a square.",
+        "c": "Incorrect. This is four times the side length.",
+        "d": "Incorrect. This is just the side length."
       },
-      "correctAnswer": "b",
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the formula for the area of a circle with radius 'r'?",
+      "answers": {
+        "a": "πr^2",
+        "b": "2πr",
+        "c": "πr",
+        "d": "2r"
+      },
+      "explanations": {
+        "a": "Correct. The area of a circle is Pi times the radius squared.",
+        "b": "Incorrect. This is the formula for the circumference of a circle.",
+        "c": "Incorrect. This is not a valid formula.",
+        "d": "Incorrect. This is the diameter of a circle."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What does Pi (π) represent?",
+      "answers": {
+        "a": "The ratio of a circle's circumference to its diameter",
+        "b": "The area of a circle",
+        "c": "The circumference of a circle",
+        "d": "The diameter of a circle"
+      },
+      "explanations": {
+        "a": "Correct. Pi is the constant ratio of a circle's circumference to its diameter.",
+        "b": "Incorrect. The area of a circle is πr^2.",
+        "c": "Incorrect. The circumference of a circle is 2πr.",
+        "d": "Incorrect. The diameter is the distance across a circle through its center."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the fundamental idea behind the Monte Carlo method?",
+      "answers": {
+        "a": "Using random sampling to obtain numerical results",
+        "b": "Solving equations algebraically",
+        "c": "Using calculus to find areas",
+        "d": "Measuring physical objects"
+      },
+      "explanations": {
+        "a": "Correct. The Monte Carlo method uses randomness to solve problems.",
+        "b": "Incorrect. The Monte Carlo method is a numerical method, not an algebraic one.",
+        "c": "Incorrect. While it can be used for integration, its core idea is random sampling.",
+        "d": "Incorrect. The Monte Carlo method is a computational technique."
+      },
+      "correctAnswer": "a",
       "difficulty": "intermediate"
     },
     {
-      "question": "Which MPI operation would you use to send data from one process to another specific process?",
+      "question": "If you throw a dart at a board, what does the probability of hitting a certain area depend on?",
       "answers": {
-        "a": "MPI_Bcast",
-        "b": "MPI_Reduce",
-        "c": "MPI_Send",
-        "d": "MPI_Gather"
+        "a": "The size of the area",
+        "b": "The color of the area",
+        "c": "The position of the area",
+        "d": "The shape of the area"
       },
       "explanations": {
-        "a": "Incorrect. MPI_Bcast broadcasts data from one process to all other processes.",
-        "b": "Incorrect. MPI_Reduce aggregates data across processes.",
-        "c": "Correct. MPI_Send is used for sending data directly from one process to another.",
-        "d": "Incorrect. MPI_Gather collects data from multiple processes."
+        "a": "Correct. The larger the area, the higher the probability of hitting it.",
+        "b": "Incorrect. The color does not affect the probability.",
+        "c": "Incorrect. Assuming the throw is random, the position does not matter.",
+        "d": "Incorrect. While related to size, the size is the direct factor."
       },
-      "correctAnswer": "c",
+      "correctAnswer": "a",
       "difficulty": "intermediate"
     },
     {
-      "question": "Which MPI operation would you use to broadcast a variable from one process to all other processes?",
+      "question": "In the experiment, the ratio of points inside the circle to the total points is an approximation of what?",
       "answers": {
-        "a": "MPI_Send",
-        "b": "MPI_Recv",
-        "c": "MPI_Bcast",
-        "d": "MPI_Reduce"
+        "a": "The ratio of the circle's area to the square's area",
+        "b": "The value of Pi",
+        "c": "The area of the circle",
+        "d": "The area of the square"
       },
       "explanations": {
-        "a": "Incorrect. MPI_Send is for point-to-point communication, not broadcasting.",
-        "b": "Incorrect. MPI_Recv is for receiving messages in point-to-point communication.",
-        "c": "Correct. MPI_Bcast broadcasts data from one process to all others in a communicator.",
-        "d": "Incorrect. MPI_Reduce aggregates values across processes, not broadcasting."
+        "a": "Correct. This ratio of areas is equal to π/4.",
+        "b": "Incorrect. The ratio approximates π/4, not π directly.",
+        "c": "Incorrect. The ratio is of two areas.",
+        "d": "Incorrect. The ratio is of two areas."
       },
-      "correctAnswer": "c",
+      "correctAnswer": "a",
       "difficulty": "intermediate"
     },
     {
-      "question": "In a distributed MPI program, how would you typically aggregate partial results from all nodes?",
+      "question": "How does the number of random points generated affect the accuracy of the estimated value of Pi?",
       "answers": {
-        "a": "Using MPI_Bcast",
-        "b": "Using MPI_Scatter",
-        "c": "Using MPI_Reduce",
-        "d": "Using MPI_Cart_create"
+        "a": "More points generally lead to a more accurate estimation",
+        "b": "Fewer points generally lead to a more accurate estimation",
+        "c": "The number of points does not affect the accuracy",
+        "d": "The accuracy depends on the size of the points"
       },
       "explanations": {
-        "a": "Incorrect. MPI_Bcast sends data from one process to all others.",
-        "b": "Incorrect. MPI_Scatter distributes different parts of data to processes.",
-        "c": "Correct. MPI_Reduce combines results from all processes.",
-        "d": "Incorrect. MPI_Cart_create defines a communication topology."
-      },
-      "correctAnswer": "c",
-      "difficulty": "intermediate"
-    },
-    {
-      "question": "Which of the following is a benefit of using non-blocking operations like MPI_Isend and MPI_Irecv in MPI?",
-      "answers": {
-        "a": "They allow overlapping communication with computation",
-        "b": "They synchronize all processes simultaneously",
-        "c": "They require fewer resources than blocking operations",
-        "d": "They improve error handling for distributed systems"
-      },
-      "explanations": {
-        "a": "Correct. Non-blocking operations enable computation to proceed while communication is pending.",
-        "b": "Incorrect. Non-blocking operations do not perform synchronization.",
-        "c": "Incorrect. Non-blocking operations can require careful resource management.",
-        "d": "Incorrect. Non-blocking operations do not specifically enhance error handling."
+        "a": "Correct. According to the law of large numbers, more samples lead to a better approximation.",
+        "b": "Incorrect. Fewer points lead to a less accurate estimation.",
+        "c": "Incorrect. The number of points is crucial for accuracy.",
+        "d": "Incorrect. The size of the points is not a factor in the simulation."
       },
       "correctAnswer": "a",
       "difficulty": "advanced"
     },
     {
-      "question": "Why is domain decomposition important in distributed systems?",
-      "answers": {
-        "a": "It prevents nodes from communicating with each other",
-        "b": "It allows the problem to be split into parts processed independently",
-        "c": "It reduces the need for inter-process communication",
-        "d": "It ensures that all nodes have the same data"
-      },
-      "explanations": {
-        "a": "Incorrect. Domain decomposition involves communication between nodes.",
-        "b": "Correct. Domain decomposition allows each process to handle a part of the problem.",
-        "c": "Incorrect. While it may reduce communication, that is not its main purpose.",
-        "d": "Incorrect. Nodes typically work on different parts of the problem, not identical data."
-      },
-      "correctAnswer": "b",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "Which of the following is a common challenge in distributed systems for computing π?",
-      "answers": {
-        "a": "Ensuring all processes share a common memory space",
-        "b": "Maintaining precise synchronization across processes",
-        "c": "Storing the entire dataset on each node",
-        "d": "Avoiding any use of network resources"
-      },
-      "explanations": {
-        "a": "Incorrect. Distributed systems do not use shared memory across nodes.",
-        "b": "Correct. Synchronization can be challenging in distributed systems.",
-        "c": "Incorrect. Nodes usually handle parts of the data independently.",
-        "d": "Incorrect. Communication over a network is essential in distributed systems."
-      },
-      "correctAnswer": "b",
-      "difficulty": "advanced"
-    },
-    {
-      "question": "Which MPI function would be used to define a grid topology for processes?",
-      "answers": {
-        "a": "MPI_Bcast",
-        "b": "MPI_Comm_rank",
-        "c": "MPI_Gather",
-        "d": "MPI_Cart_create"
-      },
-      "explanations": {
-        "a": "Incorrect. MPI_Bcast broadcasts data to all processes.",
-        "b": "Incorrect. MPI_Comm_rank retrieves the process rank.",
-        "c": "Incorrect. MPI_Gather collects data from all processes.",
-        "d": "Correct. MPI_Cart_create creates a process grid for communication."
-      },
-      "correctAnswer": "d",
-      "difficulty": "advanced"
-    },
-    {
-      "question": "What is a benefit of using the Monte Carlo method to compute π in a distributed system?",
-      "answers": {
-        "a": "It requires no random numbers for approximation",
-        "b": "It provides an exact value of π",
-        "c": "It is easily parallelizable and can handle failures gracefully",
-        "d": "It is unaffected by the number of samples used"
-      },
-      "explanations": {
-        "a": "Incorrect. The Monte Carlo method uses random sampling.",
-        "b": "Incorrect. The Monte Carlo method approximates π, not providing an exact value.",
-        "c": "Correct. Monte Carlo is suitable for parallel computation and can adapt to node failure.",
-        "d": "Incorrect. More samples generally improve the accuracy of the result."
-      },
-      "correctAnswer": "c",
-      "difficulty": "intermediate"
-    },
-    {
-      "question": "What is the formula for the area of a square with side length 's'?",
-      "options": [
-        "s^2",
-        "2s",
-        "4s",
-        "s"
-      ],
-      "answer": "s^2",
-      "level": "easy"
-    },
-    {
-      "question": "What is the formula for the area of a circle with radius 'r'?",
-      "options": [
-        "πr^2",
-        "2πr",
-        "πr",
-        "2r"
-      ],
-      "answer": "πr^2",
-      "level": "easy"
-    },
-    {
-      "question": "What does Pi (π) represent?",
-      "options": [
-        "The ratio of a circle's circumference to its diameter",
-        "The area of a circle",
-        "The circumference of a circle",
-        "The diameter of a circle"
-      ],
-      "answer": "The ratio of a circle's circumference to its diameter",
-      "level": "easy"
-    },
-    {
-      "question": "What is the fundamental idea behind the Monte Carlo method?",
-      "options": [
-        "Using random sampling to obtain numerical results",
-        "Solving equations algebraically",
-        "Using calculus to find areas",
-        "Measuring physical objects"
-      ],
-      "answer": "Using random sampling to obtain numerical results",
-      "level": "intermediate"
-    },
-    {
-      "question": "If you throw a dart at a board, what does the probability of hitting a certain area depend on?",
-      "options": [
-        "The size of the area",
-        "The color of the area",
-        "The position of the area",
-        "The shape of the area"
-      ],
-      "answer": "The size of the area",
-      "level": "intermediate"
-    },
-    {
-      "question": "In the experiment, the ratio of points inside the circle to the total points is an approximation of what?",
-      "options": [
-        "The ratio of the circle's area to the square's area",
-        "The value of Pi",
-        "The area of the circle",
-        "The area of the square"
-      ],
-      "answer": "The ratio of the circle's area to the square's area",
-      "level": "intermediate"
-    },
-    {
-      "question": "How does the number of random points generated affect the accuracy of the estimated value of Pi?",
-      "options": [
-        "More points generally lead to a more accurate estimation",
-        "Fewer points generally lead to a more accurate estimation",
-        "The number of points does not affect the accuracy",
-        "The accuracy depends on the size of the points"
-      ],
-      "answer": "More points generally lead to a more accurate estimation",
-      "level": "advanced"
-    },
-    {
       "question": "If 1000 points are generated and 785 fall inside the circle, what is the estimated value of Pi?",
-      "options": [
-        "3.14",
-        "3.14159",
-        "3.142",
-        "3.1"
-      ],
-      "answer": "3.14",
-      "level": "advanced"
+      "answers": {
+        "a": "3.14",
+        "b": "3.14159",
+        "c": "3.142",
+        "d": "3.1"
+      },
+      "explanations": {
+        "a": "Correct. The calculation is 4 * (785 / 1000) = 3.14.",
+        "b": "Incorrect. This is the actual value of Pi, not the estimate from the data.",
+        "c": "Incorrect. Check your calculation.",
+        "d": "Incorrect. Check your calculation."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
     },
     {
       "question": "Besides calculating Pi, what is another potential application of the Monte Carlo method?",
-      "options": [
-        "Simulating financial markets",
-        "Solving quadratic equations",
-        "Building a bridge",
-        "Baking a cake"
-      ],
-      "answer": "Simulating financial markets",
-      "level": "advanced"
+      "answers": {
+        "a": "Simulating financial markets",
+        "b": "Solving quadratic equations",
+        "c": "Building a bridge",
+        "d": "Baking a cake"
+      },
+      "explanations": {
+        "a": "Correct. Monte Carlo methods are widely used in finance to model stock prices and other financial instruments. <a href='https://en.wikipedia.org/wiki/Monte_Carlo_methods_in_finance' target='_blank'>Read more here.</a>",
+        "b": "Incorrect. Quadratic equations have deterministic solutions.",
+        "c": "Incorrect. Bridge building is an engineering problem, not a typical application of Monte Carlo methods.",
+        "d": "Incorrect. Baking is a chemical process, not a computational one."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
     }
   ]
 }
