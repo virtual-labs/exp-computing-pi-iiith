@@ -1,5 +1,3 @@
-### Procedure
-
 1.  **Start the simulation:** Click on the "Start" button to begin the experiment.
 2.  **Number of points:** Use the slider to select the number of points to be plotted on the graph. The more points you plot, the more accurate your results will be.
 3.  **Plot points:** Click on the "Plot Points" button to generate random points on the graph.
