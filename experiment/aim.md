@@ -1,1 +1,1 @@
-### The aim of this experiment is to approximate the value of Pi using the Monte Carlo method. This experiment will help in understanding the probabilistic approach to solving mathematical problems.
+The aim of this experiment is to approximate the value of Pi using the Monte Carlo method. This experiment will help in understanding the probabilistic approach to solving mathematical problems.
