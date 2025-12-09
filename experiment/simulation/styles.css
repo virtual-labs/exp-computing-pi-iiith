@@ -568,6 +568,28 @@
             margin-top: 5px;
         }
 
+        .intermediate-values-container {
+            max-height: 300px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .intermediate-values-container::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .intermediate-values-container::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 3px;
+        }
+
+        .intermediate-values-container::-webkit-scrollbar-thumb {
+            background: #4299e1;
+            border-radius: 3px;
+        }
+
         .code-download-card {
             background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
             border: 2px solid #0ea5e9;

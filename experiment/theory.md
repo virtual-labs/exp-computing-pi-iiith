@@ -6,4 +6,20 @@ If we randomly generate a large number of points within the square, the ratio of
 
 So, if we generate N points, and M of them fall inside the circle, then M/N ≈ π/4, which means π ≈ 4 * (M/N).
 
+## Chernoff Bound and Convergence Analysis
+
+The Chernoff bound provides a theoretical guarantee on the accuracy of our Monte Carlo estimate. Each point we generate can be treated as an independent Bernoulli trial, where "success" means the point falls inside the circle. The probability of success is p = π/4.
+
+Let X be the number of points that fall inside the circle out of N total points. Then X follows a binomial distribution with parameters N and p = π/4. The Chernoff bound states that for any δ > 0:
+
+$$P(|X - Np| \geq \delta Np) \leq 2e^{-\frac{\delta^2 Np}{3}}$$
+
+This means that the probability of our estimate deviating from the true value by more than a factor of δ decreases exponentially with N. In other words, as we increase the number of sample points N, we get exponentially better confidence that our estimate $\hat{\pi} = 4M/N$ is close to the true value of π.
+
+For a desired error bound ε and confidence level (1 - δ), we can determine the required number of samples N using:
+
+$$N \geq \frac{3\ln(2/\delta)}{\epsilon^2 p}$$
+
+where p = π/4. This gives us a concrete relationship between the number of samples, the accuracy of our estimate, and our confidence in that accuracy.
+
 In this experiment, we will simulate this process to estimate the value of Pi.

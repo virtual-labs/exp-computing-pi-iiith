@@ -144,19 +144,46 @@
                 const pointsPerProcess = Math.ceil(totalPoints / this.processes.length);
                 let visualizedItems = 0;
                 
+                this.clearIntermediateValues();
+                
                 this.addLog(`Scattering ${pointsPerProcess.toLocaleString()} points per process`, 'info');
                 await this.visualizeCommunication('scatter', `Assigning ${pointsPerProcess.toLocaleString()} points`);
                 
                 this.addLog('Starting parallel Monte Carlo sampling', 'info');
+                
+                // Track intermediate results
+                const intermediateResults = [];
+                const checkpointInterval = Math.floor(pointsPerProcess / 10); // 10% intervals
+                
                 const computePromises = this.processes.map(p => {
-                    return new Promise(resolve => {
+                    return new Promise(async (resolve) => {
                         this.updateProcessStatus(p.id, 'Computing');
                         let localInside = 0;
+                        let totalInside = 0;
+                        
                         for (let j = 0; j < pointsPerProcess; j++) {
                             const x = Math.random(), y = Math.random();
                             const isInside = x * x + y * y <= 1;
                             if (isInside) localInside++;
                             if (visualizedItems++ < this.MAX_VISUAL_ITEMS) this.drawPiPoint(x, y, isInside);
+                            
+                            // Check if we've reached a checkpoint (every 10%)
+                            if (j > 0 && j % checkpointInterval === 0 && p.id === 0) {
+                                // Broadcast to gather intermediate results from all processes
+                                const currentTotalPoints = (j + 1) * this.processes.length;
+                                totalInside = localInside * this.processes.length; // Approximate total
+                                const intermediatePi = 4 * (totalInside / currentTotalPoints);
+                                const progress = Math.floor((j / pointsPerProcess) * 100);
+                                
+                                intermediateResults.push({
+                                    progress: progress,
+                                    pi: intermediatePi,
+                                    points: currentTotalPoints
+                                });
+                                
+                                this.updateIntermediateValue(progress, intermediatePi, currentTotalPoints);
+                                await new Promise(r => setTimeout(r, this.getAnimationDelay(100)));
+                            }
                         }
                         this.updateProgress(20 + (p.id + 1) / this.processes.length * 50);
                         resolve(localInside);
@@ -170,6 +197,7 @@
 
                 this.updateProgress(100);
                 const piEstimate = 4 * (totalInside / (pointsPerProcess * this.processes.length));
+                this.updateIntermediateValue(100, piEstimate, pointsPerProcess * this.processes.length);
                 this.addLog(`Found ${totalInside} points inside circle out of ${pointsPerProcess * this.processes.length}`, 'success');
                 return piEstimate;
             }
@@ -191,6 +219,8 @@
                 const numProcesses = this.processes.length;
                 const slicesPerProcess = Math.ceil(numSlices / numProcesses);
                 
+                this.clearIntermediateValues();
+                
                 const rectsContainer = document.getElementById('rectangles');
                 if (rectsContainer) rectsContainer.innerHTML = '';
                 
@@ -199,9 +229,10 @@
 
                 this.addLog('Starting parallel Riemann sum computation', 'info');
                 const totalVisualRects = Math.min(numSlices, this.MAX_VISUAL_ITEMS);
+                const checkpointInterval = Math.floor(slicesPerProcess / 10); // 10% intervals
 
                 const computePromises = this.processes.map((p, processId) => {
-                    return new Promise(resolve => {
+                    return new Promise(async (resolve) => {
                         this.updateProcessStatus(processId, 'Computing');
                         
                         const startIndex = processId * slicesPerProcess;
@@ -220,6 +251,17 @@
                                 const height = Math.sqrt(1 - x * x);
                                 const width = 1 / numSlices;
                                 localArea += height * width;
+                                
+                                // Check for intermediate checkpoints (every 10%)
+                                const relativeIndex = i - startIndex;
+                                if (relativeIndex > 0 && relativeIndex % checkpointInterval === 0 && processId === 0) {
+                                    const currentSlices = (relativeIndex + 1) * numProcesses;
+                                    const intermediatePi = 4 * (localArea * numProcesses);
+                                    const progress = Math.floor((relativeIndex / numSlicesForProcess) * 100);
+                                    
+                                    this.updateIntermediateValue(progress, intermediatePi, currentSlices);
+                                    await new Promise(r => setTimeout(r, this.getAnimationDelay(100)));
+                                }
                                 
                                 if ((i - startIndex) % vizStep === 0) {
                                     const representativeWidth = vizStep / numSlices;
@@ -250,6 +292,7 @@
                 
                 this.updateProgress(100);
                 const piEstimate = 4 * totalArea;
+                this.updateIntermediateValue(100, piEstimate, numSlices);
                 this.addLog(`Computed total area: ${totalArea.toFixed(8)}`, 'success');
                 return piEstimate;
             }
@@ -348,7 +391,43 @@
                 this.updateConfigDisplay();
                 this.updateProgress(0);
                 this.clearLogs();
+                this.clearIntermediateValues();
                 this.addLog('System reset and ready for simulation', 'info');
+            }
+
+            updateIntermediateValue(progress, piValue, totalItems) {
+                const container = document.getElementById('intermediateValues');
+                if (!container) return;
+                
+                // Clear placeholder text on first update
+                if (progress === 10) {
+                    container.innerHTML = '';
+                }
+                
+                const valueCard = document.createElement('div');
+                valueCard.className = 'stat-card';
+                valueCard.style.animation = 'fadeIn 0.3s ease';
+                valueCard.innerHTML = `
+                    <div class="stat-value" style="color: #3b82f6;">${piValue.toFixed(8)}</div>
+                    <div class="stat-label">${progress}% Complete</div>
+                    <div class="stat-description">${totalItems.toLocaleString()} ${this.currentExperiment === 'monte-carlo' ? 'points' : 'slices'}</div>
+                `;
+                
+                container.appendChild(valueCard);
+                
+                // Auto-scroll to show latest value
+                container.scrollTop = container.scrollHeight;
+            }
+
+            clearIntermediateValues() {
+                const container = document.getElementById('intermediateValues');
+                if (container) {
+                    container.innerHTML = `
+                        <div class="stat-description" style="text-align: center; color: #64748b; padding: 10px;">
+                            Values will appear during simulation
+                        </div>
+                    `;
+                }
             }
 
             addLog(message, type = 'info') {
