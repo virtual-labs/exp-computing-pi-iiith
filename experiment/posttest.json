@@ -153,6 +153,125 @@
       },
       "correctAnswer": "a",
       "difficulty": "advanced"
+    },
+    {
+      "question": "What is the primary source of error when estimating Pi using the Monte Carlo method?",
+      "answers": {
+        "a": "Statistical sampling error due to finite number of random points",
+        "b": "The computer's inability to draw perfect circles",
+        "c": "Rounding errors in the value of Pi itself",
+        "d": "The square not being perfectly aligned"
+      },
+      "explanations": {
+        "a": "Correct. The main source of error is that we're using a finite sample to estimate a theoretical ratio, leading to statistical variance.",
+        "b": "Incorrect. We're not actually drawing circles; we're using mathematical calculations.",
+        "c": "Incorrect. We're estimating Pi, not using its value in calculations.",
+        "d": "Incorrect. The alignment is mathematically defined and precise."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "If your experiment with 10,000 points gives an estimate of Pi = 3.15, and another run gives Pi = 3.13, what does this tell you?",
+      "answers": {
+        "a": "Both estimates are reasonable given the random nature of the method",
+        "b": "One of the experiments must have an error in the code",
+        "c": "The true value of Pi changes between experiments",
+        "d": "You should always use the higher estimate"
+      },
+      "explanations": {
+        "a": "Correct. Random sampling naturally produces variation around the true value. Both estimates are within expected statistical bounds.",
+        "b": "Incorrect. Variation in results is expected and normal for Monte Carlo methods.",
+        "c": "Incorrect. Pi is a mathematical constant that never changes.",
+        "d": "Incorrect. Neither estimate is necessarily better; averaging multiple runs might give a better estimate."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "How does the convergence rate of the Monte Carlo method for Pi compare as you increase the number of points?",
+      "answers": {
+        "a": "The error decreases proportionally to 1/√n, where n is the number of points",
+        "b": "The error decreases proportionally to 1/n, where n is the number of points",
+        "c": "The error remains constant regardless of the number of points",
+        "d": "The error increases as you add more points"
+      },
+      "explanations": {
+        "a": "Correct. Monte Carlo methods typically have a convergence rate of O(1/√n), which is relatively slow but applies to any dimensionality.",
+        "b": "Incorrect. This would be much faster convergence than Monte Carlo methods typically achieve.",
+        "c": "Incorrect. Adding more points definitely improves the estimate.",
+        "d": "Incorrect. More points lead to better, not worse, estimates."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Which of the following would NOT improve the accuracy of the Monte Carlo estimation of Pi?",
+      "answers": {
+        "a": "Using a larger square while keeping the circle size the same",
+        "b": "Increasing the number of random points generated",
+        "c": "Running multiple experiments and averaging the results",
+        "d": "Using a better random number generator"
+      },
+      "explanations": {
+        "a": "Correct. Changing the ratio between the square and circle would actually break the method, as the mathematical relationship π/4 depends on the circle being inscribed in the square.",
+        "b": "Incorrect. More points always improve accuracy on average.",
+        "c": "Incorrect. Averaging multiple independent runs reduces variance and improves the estimate.",
+        "d": "Incorrect. A better random number generator ensures better distribution of points."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "What practical limitation might you encounter when trying to use 1 billion points to estimate Pi?",
+      "answers": {
+        "a": "Computational time and memory resources required",
+        "b": "The estimate would become less accurate with too many points",
+        "c": "The random number generator would stop working",
+        "d": "The circle would become too large to fit in the square"
+      },
+      "explanations": {
+        "a": "Correct. Generating, processing, and potentially storing information about 1 billion points requires significant computational resources and time.",
+        "b": "Incorrect. More points generally lead to better accuracy, not worse.",
+        "c": "Incorrect. Modern random number generators can produce far more than 1 billion numbers.",
+        "d": "Incorrect. The size of the shapes is abstract and doesn't depend on the number of points."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "If you observe that points are clustering in certain regions of the square rather than being uniformly distributed, what is the most likely cause?",
+      "answers": {
+        "a": "Poor quality random number generator producing biased samples",
+        "b": "The mathematical formula for Pi is incorrect",
+        "c": "Too many points are being generated",
+        "d": "The circle is not perfectly round"
+      },
+      "explanations": {
+        "a": "Correct. Non-uniform distribution of points indicates the random number generator is not producing truly random or pseudo-random numbers with uniform distribution.",
+        "b": "Incorrect. The formula doesn't affect point distribution.",
+        "c": "Incorrect. More points wouldn't cause clustering if properly randomized.",
+        "d": "Incorrect. The circle's definition is mathematical and perfect."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Why is the Monte Carlo method particularly useful for complex problems in science and engineering?",
+      "answers": {
+        "a": "It can provide approximate solutions to problems that are difficult or impossible to solve analytically",
+        "b": "It always gives exact answers faster than other methods",
+        "c": "It doesn't require any mathematical knowledge",
+        "d": "It only works for estimating Pi"
+      },
+      "explanations": {
+        "a": "Correct. Monte Carlo methods excel at solving high-dimensional problems, integration, and optimization where analytical solutions are impractical or impossible.",
+        "b": "Incorrect. Monte Carlo gives approximate, not exact, answers and may not always be the fastest method.",
+        "c": "Incorrect. Understanding probability, statistics, and the underlying problem requires mathematical knowledge.",
+        "d": "Incorrect. Monte Carlo methods are used in physics, finance, machine learning, and many other fields."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
     }
   ]
 }
