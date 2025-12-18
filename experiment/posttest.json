@@ -2,174 +2,276 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "With 2 processes and 50 intervals, what is the estimated values of π?",
+      "question": "What is the relationship between the radius and diameter of a circle?",
       "answers": {
-        "a": "3.142",
-        "b": "3.140",
-        "c": "3.138",
-        "d": "3.136"
+        "a": "The diameter is twice the radius",
+        "b": "The radius is twice the diameter",
+        "c": "The radius and diameter are equal",
+        "d": "The diameter is half the radius"
       },
       "explanations": {
-        "a": "Incorrect. This is the correct value of π to 3 decimal places.",
-        "b": "You are close. The observed value is lower.",
-        "c": "Correct. This is the estimated value of π with 2 processes and 50 intervals.",
-        "d": "You are close. The observed value is higher."
+        "a": "Correct. The diameter is always twice the length of the radius.",
+        "b": "Incorrect. This would mean the radius is larger than the diameter.",
+        "c": "Incorrect. This is only true for a point, not a circle.",
+        "d": "Incorrect. This is the reverse of the correct relationship."
       },
-      "correctAnswer": "c",
-      "difficulty": "intermediate"
+      "correctAnswer": "a",
+      "difficulty": "beginner"
     },
     {
-      "question": "With 2 processes and 50 intervals, what is the wall-clock time and process time?",
+      "question": "If a square has a side length of 4 units, what is its area?",
       "answers": {
-        "a": "70 seconds, 140 seconds",
-        "b": "25 seconds, 50 seconds",
-        "c": "10 seconds, 20 seconds",
-        "d": "25 seconds, 100 seconds"
+        "a": "16 square units",
+        "b": "8 square units",
+        "c": "12 square units",
+        "d": "4 square units"
       },
       "explanations": {
-        "a": "Incorrect. This wall-clock time is too high for 2 processes.",
-        "b": "Correct. This is the wall-clock and process time with 2 processes and 50 intervals.",
-        "c": "Incorrect. This wall-clock time is too low for 2 processes.",
-        "d": "Incorrect. This is not a valid combination of wall-clock and process time for 2 processes."
+        "a": "Correct. The area of a square is side * side, so 4 * 4 = 16.",
+        "b": "Incorrect. This would be the perimeter of a square with side length 2.",
+        "c": "Incorrect. This is not the area of the square.",
+        "d": "Incorrect. This is the side length, not the area."
       },
-      "correctAnswer": "b",
-      "difficulty": "intermediate"
+      "correctAnswer": "a",
+      "difficulty": "beginner"
     },
     {
-      "question": "With 5 processes and 50 intervals, what is the computed value of π?",
+      "question": "The value of Pi is approximately...",
       "answers": {
-        "a": "3.142",
-        "b": "3.140",
-        "c": "3.138",
-        "d": "3.136"
+        "a": "3.14159",
+        "b": "2.71828",
+        "c": "1.61803",
+        "d": "1.41421"
       },
       "explanations": {
-        "a": "Incorrect. Change in the number of processes does not affect the value of π.",
-        "b": "Incorrect. Change in the number of processes does not affect the value of π.",
-        "c": "Correct. Change in the number of processes does not affect the value of π.",
-        "d": "Incorrect. Change in the number of processes does not affect the value of π."
+        "a": "Correct. This is a common approximation of Pi.",
+        "b": "Incorrect. This is the value of Euler's number, e.",
+        "c": "Incorrect. This is the golden ratio.",
+        "d": "Incorrect. This is the square root of 2."
       },
-      "correctAnswer": "c",
-      "difficulty": "intermediate"
+      "correctAnswer": "a",
+      "difficulty": "beginner"
     },
     {
-      "question": "With 5 processes and 50 intervals, what is the wall-clock time and process time?",
+      "question": "Why is the Monte Carlo method considered a probabilistic method?",
       "answers": {
-        "a": "5 seconds, 25 seconds",
-        "b": "25 seconds, 50 seconds",
-        "c": "10 seconds, 20 seconds",
-        "d": "10 seconds, 50 seconds"
+        "a": "Because it uses random numbers to find a solution",
+        "b": "Because it always gives the exact same answer",
+        "c": "Because it is a very old method",
+        "d": "Because it was invented by a gambler"
       },
       "explanations": {
-        "a": "Incorrect. This wall-clock time is too low for 5 processes.",
-        "b": "Incorrect. This is not a valid combination of wall-clock and process time for 5 processes.",
-        "c": "Incorrect. This is not a valid combination of wall-clock and process time for 5 processes.",
-        "d": "Correct. This is the wall-clock and process time with 5 processes and 50 intervals."
-      },
-      "correctAnswer": "d",
-      "difficulty": "intermediate"
-    },
-    {
-      "question": "With 5 processes and 100 intervals, what is the computed value of π?",
-      "answers": {
-        "a": "3.142",
-        "b": "3.140",
-        "c": "3.138",
-        "d": "3.136"
-      },
-      "explanations": {
-        "a": "You are close. This is the correct value of π to 3 decimal places.",
-        "b": "Correct. Increase in intervals increases precision of π.",
-        "c": "You are close. The observed value is higher, due to increased intervals.",
-        "d": "Incorrect. Increasing intervals increases precision of π."
-      },
-      "correctAnswer": "b",
-      "difficulty": "intermediate"
-    },
-    {
-      "question": "With 2 processes and 100 intervals, and with both processes having a speed of 4, what is the wall-clock time and process time?",
-      "answers": {
-        "a": "20 seconds, 50 seconds",
-        "b": "10 seconds, 20 seconds",
-        "c": "45 seconds, 90 seconds",
-        "d": "15 seconds, 30 seconds"
-      },
-      "explanations": {
-        "a": "Incorrect. This is not a valid combination of wall-clock and process time for 2 processes.",
-        "b": "Incorrect. This is too low for 2 processes and 100 intervals, with speed 4.",
-        "c": "Incorrect. This is too high for 2 processes and 100 intervals, with speed 4.",
-        "d": "Correct. This is the wall-clock and process time for 2 processes and 100 intervals, with speed 4."
-      },
-      "correctAnswer": "d",
-      "difficulty": "intermediate"
-    },
-    {
-      "question": "With 2 processes and 100 intervals, and with only one process having a speed of 4, what is the wall-clock time and process time?",
-      "answers": {
-        "a": "50 seconds, 65 seconds",
-        "b": "50 seconds, 100 seconds",
-        "c": "25 seconds, 50 seconds",
-        "d": "40 seconds, 75 seconds"
-      },
-      "explanations": {
-        "a": "Correct. This is the wall-clock and process time for 2 processes and 100 intervals, with one process at speed 4.",
-        "b": "Incorrect. One process is faster, so the wall-clock time is less than 100 seconds.",
-        "c": "Incorrect. This is too low for 2 processes and 100 intervals, with one process at speed 4.",
-        "d": "Incorrect. This is close but the process time is too high."
+        "a": "Correct. The use of random sampling is the defining characteristic of Monte Carlo methods.",
+        "b": "Incorrect. Due to its random nature, it gives slightly different results each time.",
+        "c": "Incorrect. Its age doesn't make it probabilistic.",
+        "d": "Incorrect. While it has roots in games of chance, that's not the reason for the name."
       },
       "correctAnswer": "a",
       "difficulty": "intermediate"
     },
     {
-      "question": "Why might MPI be useful for large computations like finding π to high precision?",
+      "question": "In the context of the Pi experiment, what does a point being 'inside the circle' mean?",
       "answers": {
-        "a": "MPI minimizes the need for parallelism",
-        "b": "MPI uses shared memory to store results",
-        "c": "MPI allows for splitting the computation across multiple processors",
-        "d": "MPI automatically corrects errors in computation"
+        "a": "Its distance from the center is less than the radius",
+        "b": "Its distance from the center is greater than the radius",
+        "c": "Its distance from the center is equal to the radius",
+        "d": "It is colored red"
       },
       "explanations": {
-        "a": "Incorrect. MPI is specifically designed for parallelism.",
-        "b": "Incorrect. MPI does not rely on shared memory but distributed memory.",
-        "c": "Correct. MPI enables dividing large tasks across processors to increase efficiency.",
-        "d": "Incorrect. MPI does not automatically correct errors."
+        "a": "Correct. A point is inside the circle if its distance from the center is less than the circle's radius.",
+        "b": "Incorrect. This would mean the point is outside the circle.",
+        "c": "Incorrect. This would mean the point is on the circle's circumference.",
+        "d": "Incorrect. The color is just for visualization."
       },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
     },
     {
-      "question": "What impact does increasing the number of processes have on computation time?",
+      "question": "If the area of the square is 4 and the area of the inscribed circle is π, what is the ratio of the areas?",
       "answers": {
-        "a": "It always decreases computation time linearly",
-        "b": "It initially decreases computation time but may not scale linearly due to overhead",
-        "c": "It has no effect on computation time",
-        "d": "It increases computation time due to process coordination overhead"
+        "a": "π/4",
+        "b": "4/π",
+        "c": "π",
+        "d": "4"
       },
       "explanations": {
-        "a": "Incorrect. Computation time does not always decrease linearly.",
-        "b": "Correct. Increasing processes reduces time initially, but overhead may limit gains.",
-        "c": "Incorrect. More processes usually affect computation time.",
-        "d": "Incorrect. More processes usually decrease time, though some overhead is present."
+        "a": "Correct. The ratio is Area(circle) / Area(square) = π / 4.",
+        "b": "Incorrect. This is the reciprocal of the correct ratio.",
+        "c": "Incorrect. This is the area of the circle.",
+        "d": "Incorrect. This is the area of the square."
       },
-      "correctAnswer": "b",
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "If you run the experiment twice with 1000 points each time, would you expect to get the exact same estimate for Pi? Why?",
+      "answers": {
+        "a": "No, because the points are generated randomly each time",
+        "b": "Yes, because the number of points is the same",
+        "c": "Yes, because the formula for Pi is constant",
+        "d": "No, because the computer makes errors"
+      },
+      "explanations": {
+        "a": "Correct. The random nature of the point generation will lead to slightly different outcomes.",
+        "b": "Incorrect. The number of points affects the accuracy, but not the exact outcome.",
+        "c": "Incorrect. The formula is constant, but the random sampling is not.",
+        "d": "Incorrect. While computers can make errors, the primary reason for the difference is the randomness."
+      },
+      "correctAnswer": "a",
       "difficulty": "advanced"
     },
     {
-      "question": "What is a key challenge when implementing distributed computing algorithms like this one using MPI?",
+      "question": "If you wanted to estimate the value of Pi to a very high degree of accuracy using this method, what would you need to do?",
       "answers": {
-        "a": "Ensuring all processes have access to shared memory",
-        "b": "Managing data distribution and synchronization between processes",
-        "c": "Avoiding use of multiple processors",
-        "d": "Simplifying code by reducing the number of communication calls"
+        "a": "Generate a very large number of points",
+        "b": "Use a very small number of points",
+        "c": "Use a faster computer",
+        "d": "Use a different shape instead of a circle"
       },
       "explanations": {
-        "a": "Incorrect. MPI works without shared memory, using message passing.",
-        "b": "Correct. Data distribution and synchronization are critical in MPI.",
-        "c": "Incorrect. MPI is used specifically for multi-processor systems.",
-        "d": "Incorrect. MPI often requires many communication calls to coordinate."
+        "a": "Correct. The more points you use, the closer your approximation will be to the true value of Pi. <a href='https://en.wikipedia.org/wiki/Law_of_large_numbers' target='_blank'>Read more here.</a>",
+        "b": "Incorrect. A small number of points will give a very rough estimate.",
+        "c": "Incorrect. A faster computer will do the calculation quicker, but won't improve the accuracy for a given number of points.",
+        "d": "Incorrect. The relationship between the circle and square is key to this method."
       },
-      "correctAnswer": "b",
+      "correctAnswer": "a",
       "difficulty": "advanced"
+    },
+    {
+      "question": "Imagine you have a 3D sphere inscribed in a cube. How could you adapt the Monte Carlo method to estimate Pi?",
+      "answers": {
+        "a": "Generate random points in the cube and find the ratio of points inside the sphere to the total points",
+        "b": "It's not possible to use the Monte Carlo method in 3D",
+        "c": "Draw a 2D projection and use the same method",
+        "d": "Count the vertices of the cube and sphere"
+      },
+      "explanations": {
+        "a": "Correct. The ratio of the volumes (Volume(sphere) / Volume(cube)) can be used to estimate Pi. The volume of a sphere is (4/3)πr^3 and a cube is (2r)^3 = 8r^3. The ratio is (4/3)πr^3 / 8r^3 = π/6.",
+        "b": "Incorrect. The Monte Carlo method is applicable in any number of dimensions.",
+        "c": "Incorrect. A 2D projection would not capture the 3D nature of the problem.",
+        "d": "Incorrect. Counting vertices would not give an estimate of Pi."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "What is the primary source of error when estimating Pi using the Monte Carlo method?",
+      "answers": {
+        "a": "Statistical sampling error due to finite number of random points",
+        "b": "The computer's inability to draw perfect circles",
+        "c": "Rounding errors in the value of Pi itself",
+        "d": "The square not being perfectly aligned"
+      },
+      "explanations": {
+        "a": "Correct. The main source of error is that we're using a finite sample to estimate a theoretical ratio, leading to statistical variance.",
+        "b": "Incorrect. We're not actually drawing circles; we're using mathematical calculations.",
+        "c": "Incorrect. We're estimating Pi, not using its value in calculations.",
+        "d": "Incorrect. The alignment is mathematically defined and precise."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "If your experiment with 10,000 points gives an estimate of Pi = 3.15, and another run gives Pi = 3.13, what does this tell you?",
+      "answers": {
+        "a": "Both estimates are reasonable given the random nature of the method",
+        "b": "One of the experiments must have an error in the code",
+        "c": "The true value of Pi changes between experiments",
+        "d": "You should always use the higher estimate"
+      },
+      "explanations": {
+        "a": "Correct. Random sampling naturally produces variation around the true value. Both estimates are within expected statistical bounds.",
+        "b": "Incorrect. Variation in results is expected and normal for Monte Carlo methods.",
+        "c": "Incorrect. Pi is a mathematical constant that never changes.",
+        "d": "Incorrect. Neither estimate is necessarily better; averaging multiple runs might give a better estimate."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "How does the convergence rate of the Monte Carlo method for Pi compare as you increase the number of points?",
+      "answers": {
+        "a": "The error decreases proportionally to 1/√n, where n is the number of points",
+        "b": "The error decreases proportionally to 1/n, where n is the number of points",
+        "c": "The error remains constant regardless of the number of points",
+        "d": "The error increases as you add more points"
+      },
+      "explanations": {
+        "a": "Correct. Monte Carlo methods typically have a convergence rate of O(1/√n), which is relatively slow but applies to any dimensionality.",
+        "b": "Incorrect. This would be much faster convergence than Monte Carlo methods typically achieve.",
+        "c": "Incorrect. Adding more points definitely improves the estimate.",
+        "d": "Incorrect. More points lead to better, not worse, estimates."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Which of the following would NOT improve the accuracy of the Monte Carlo estimation of Pi?",
+      "answers": {
+        "a": "Using a larger square while keeping the circle size the same",
+        "b": "Increasing the number of random points generated",
+        "c": "Running multiple experiments and averaging the results",
+        "d": "Using a better random number generator"
+      },
+      "explanations": {
+        "a": "Correct. Changing the ratio between the square and circle would actually break the method, as the mathematical relationship π/4 depends on the circle being inscribed in the square.",
+        "b": "Incorrect. More points always improve accuracy on average.",
+        "c": "Incorrect. Averaging multiple independent runs reduces variance and improves the estimate.",
+        "d": "Incorrect. A better random number generator ensures better distribution of points."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "What practical limitation might you encounter when trying to use 1 billion points to estimate Pi?",
+      "answers": {
+        "a": "Computational time and memory resources required",
+        "b": "The estimate would become less accurate with too many points",
+        "c": "The random number generator would stop working",
+        "d": "The circle would become too large to fit in the square"
+      },
+      "explanations": {
+        "a": "Correct. Generating, processing, and potentially storing information about 1 billion points requires significant computational resources and time.",
+        "b": "Incorrect. More points generally lead to better accuracy, not worse.",
+        "c": "Incorrect. Modern random number generators can produce far more than 1 billion numbers.",
+        "d": "Incorrect. The size of the shapes is abstract and doesn't depend on the number of points."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "If you observe that points are clustering in certain regions of the square rather than being uniformly distributed, what is the most likely cause?",
+      "answers": {
+        "a": "Poor quality random number generator producing biased samples",
+        "b": "The mathematical formula for Pi is incorrect",
+        "c": "Too many points are being generated",
+        "d": "The circle is not perfectly round"
+      },
+      "explanations": {
+        "a": "Correct. Non-uniform distribution of points indicates the random number generator is not producing truly random or pseudo-random numbers with uniform distribution.",
+        "b": "Incorrect. The formula doesn't affect point distribution.",
+        "c": "Incorrect. More points wouldn't cause clustering if properly randomized.",
+        "d": "Incorrect. The circle's definition is mathematical and perfect."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Why is the Monte Carlo method particularly useful for complex problems in science and engineering?",
+      "answers": {
+        "a": "It can provide approximate solutions to problems that are difficult or impossible to solve analytically",
+        "b": "It always gives exact answers faster than other methods",
+        "c": "It doesn't require any mathematical knowledge",
+        "d": "It only works for estimating Pi"
+      },
+      "explanations": {
+        "a": "Correct. Monte Carlo methods excel at solving high-dimensional problems, integration, and optimization where analytical solutions are impractical or impossible.",
+        "b": "Incorrect. Monte Carlo gives approximate, not exact, answers and may not always be the fastest method.",
+        "c": "Incorrect. Understanding probability, statistics, and the underlying problem requires mathematical knowledge.",
+        "d": "Incorrect. Monte Carlo methods are used in physics, finance, machine learning, and many other fields."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
     }
   ]
 }
