@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPI Pi Calculation Lab</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <h1>
+                🧮 MPI Pi Calculation Lab
+                <div class="status-indicator"></div>
+            </h1>
+            <div style="font-size: 0.9em; opacity: 0.9;">
+                Parallel Computing Simulation
+            </div>
+        </header>
+
+        <div class="controls-panel">
+            <div class="control-section">
+                <h3>Experiment Method</h3>
+                <div class="control-item">
+                    <label>Select Calculation Method</label>
+                    <select id="experimentMethodSelector">
+                        <option value="monte-carlo" selected>🎯 Monte Carlo Method</option>
+                        <option value="riemann">📊 Riemann Sum Method</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="control-section">
+                <h3>System Configuration</h3>
+                <div class="control-group">
+                    <div class="control-item">
+                        <label>Number of Processes</label>
+                        <select id="processCountSelector">
+                            <option value="2">2 Processes</option>
+                            <option value="4" selected>4 Processes</option>
+                            <option value="8">8 Processes</option>
+                            <option value="16">16 Processes</option>
+                        </select>
+                    </div>
+                    
+                    <div class="control-item">
+                        <label id="precisionLabel">Precision (Points)</label>
+                        <select id="precisionSelector">
+                            <option value="1000">1,000</option>
+                            <option value="10000" selected>10,000</option>
+                            <option value="100000">100,000</option>
+                            <option value="1000000">1,000,000</option>
+                        </select>
+                    </div>
+
+                    <div class="control-item">
+                        <label>Animation Speed</label>
+                        <div class="speed-control">
+                            <input type="range" id="speedSlider" min="0.25" max="3" step="0.25" value="1" class="speed-slider">
+                            <div class="speed-display">
+                                <span id="speedValue">1.0x</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="control-section">
+                <h3>Simulation Control</h3>
+                <button class="btn btn-primary" id="startBtn">
+                    ▶️ Start Simulation
+                </button>
+            </div>
+        </div>
+
+        <div class="experiment-area">
+            <div class="simulation-area">
+                <button class="info-button" onclick="toggleInfoModal()" title="Click for feature guide">
+                    ℹ️
+                </button>
+                <div class="process-grid" id="processGrid"></div>
+                <div id="experimentContent"></div>
+            </div>
+        </div>
+
+        <div class="observations-panel">
+            <div class="status-section">
+                <h4>Simulation Logs</h4>
+                <div class="logs-container" id="logsContainer">
+                    <div class="log-entry">
+                        <span class="log-time">00:00:00</span>
+                        <span class="log-message">System initialized and ready</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="status-section">
+                <h4>MPI Code Download</h4>
+                <div class="code-download-card">
+                    <div class="download-description">
+                        Download complete MPI implementation for Pi calculation
+                    </div>
+                    <button id="downloadMPICode" class="download-btn">
+                        <span class="download-icon">📁</span>
+                        Download MPI Code
+                    </button>
+                </div>
+            </div>
+
+            <div class="status-section">
+                <h4>Intermediate π Values</h4>
+                <div class="intermediate-values-container" id="intermediateValues">
+                    <div class="stat-description" style="text-align: center; color: #64748b; padding: 10px;">
+                        Values will appear during simulation
+                    </div>
+                </div>
+            </div>
+
+            <div class="status-section">
+                <h4>Configuration</h4>
+                <div class="stat-card">
+                    <div class="stat-value" id="processCount">4</div>
+                    <div class="stat-label">MPI Processes</div>
+                    <div class="stat-description">Number of parallel processes</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-value" id="piValue">3.14159</div>
+                    <div class="stat-label">Final π Value</div>
+                    <div class="stat-description">Calculated value</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-value" id="calculationMethod">Monte Carlo</div>
+                    <div class="stat-label">Method</div>
+                    <div class="stat-description">Calculation approach</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Info Modal -->
+    <div id="infoModal" class="info-modal" onclick="closeInfoModal(event)">
+        <div class="info-modal-content" onclick="event.stopPropagation()">
+            <div class="info-modal-header">
+                <h2>🧮 MPI Pi Calculation Guide</h2>
+                <button class="close-button" onclick="closeInfoModal()">&times;</button>
+            </div>
+            <div class="info-modal-body">
+                <div class="feature-section">
+                    <h3>🎯 Calculation Methods</h3>
+                    <ul>
+                        <li><strong>🎯 Monte Carlo Method:</strong>
+                            <ul>
+                                <li>Randomly throws "darts" at a unit square containing a quarter circle</li>
+                                <li>Counts how many points land inside vs outside the circle</li>
+                                <li>Uses ratio to estimate π: π ≈ 4 × (points_inside / total_points)</li>
+                                <li>More random samples = better accuracy</li>
+                                <li>Visual: Red dots (outside) and green dots (inside) on circle</li>
+                            </ul>
+                        </li>
+                        <li><strong>📊 Riemann Sum Method:</strong>
+                            <ul>
+                                <li>Approximates area under quarter circle using rectangular slices</li>
+                                <li>Each slice has width Δx and height based on circle equation</li>
+                                <li>Sums all slice areas to approximate quarter circle area</li>
+                                <li>Uses area to calculate π: π ≈ 4 × quarter_circle_area</li>
+                                <li>Visual: Colored rectangles filling the space under the curve</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="feature-section">
+                    <h3>🔧 System Configuration</h3>
+                    <ul>
+                        <li><strong>Number of Processes:</strong> Choose 2, 4, 8, or 16 MPI processes for parallel computation</li>
+                        <li><strong>Precision Settings:</strong>
+                            <ul>
+                                <li><em>Monte Carlo:</em> Number of random points (1K to 1M)</li>
+                                <li><em>Riemann Sum:</em> Number of rectangular slices (1K to 1M)</li>
+                                <li>Higher precision = better accuracy but longer computation time</li>
+                            </ul>
+                        </li>
+                        <li><strong>Animation Speed:</strong> Control visualization speed (0.25x to 3x) for better observation</li>
+                        <li><strong>Parallel Strategy:</strong> Work is divided equally among all processes</li>
+                    </ul>
+                </div>
+
+                <div class="feature-section">
+                    <h3>🚀 MPI Parallel Algorithm</h3>
+                    <ol>
+                        <li><strong>Phase 1 - Work Distribution (Scatter):</strong>
+                            <ul>
+                                <li>Master process divides total work among all processes</li>
+                                <li>Each process gets approximately equal number of points/slices</li>
+                                <li>Process assignment shown in process grid with different colors</li>
+                            </ul>
+                        </li>
+                        <li><strong>Phase 2 - Parallel Computation:</strong>
+                            <ul>
+                                <li>All processes work simultaneously on their assigned portion</li>
+                                <li>Monte Carlo: Generate random points and test if inside circle</li>
+                                <li>Riemann: Calculate rectangle areas for assigned x-intervals</li>
+                                <li>Each process maintains its own partial result</li>
+                            </ul>
+                        </li>
+                        <li><strong>Phase 3 - Result Aggregation (Reduce):</strong>
+                            <ul>
+                                <li>Master process collects partial results from all workers</li>
+                                <li>Combines all partial results to get final π estimate</li>
+                                <li>Displays final calculated value and accuracy</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="feature-section">
+                    <h3>📊 Understanding the Visualization</h3>
+                    <ul>
+                        <li><strong>Process Grid:</strong> Shows all MPI processes with their current status and workload</li>
+                        <li><strong>Process Colors:</strong> Each process has unique color matching its contribution in visualizations</li>
+                        <li><strong>Monte Carlo Visualization:</strong>
+                            <ul>
+                                <li>Quarter circle with unit square boundary</li>
+                                <li>Green dots = points inside circle (count towards π)</li>
+                                <li>Red dots = points outside circle</li>
+                                <li>Real-time ratio updates as points are added</li>
+                            </ul>
+                        </li>
+                        <li><strong>Riemann Sum Visualization:</strong>
+                            <ul>
+                                <li>Graph showing quarter circle curve y = √(1-x²)</li>
+                                <li>Colored rectangles approximating area under curve</li>
+                                <li>Each process color corresponds to its assigned x-intervals</li>
+                                <li>Rectangle heights calculated from circle equation</li>
+                            </ul>
+                        </li>
+                        <li><strong>Process States:</strong>
+                            <ul>
+                                <li><em>Idle:</em> Waiting for work assignment</li>
+                                <li><em>Computing:</em> Actively calculating assigned work</li>
+                                <li><em>Finished:</em> Completed computation and sent results</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="feature-section">
+                    <h3>🔬 Mathematical Background</h3>
+                    <ul>
+                        <li><strong>Monte Carlo Principle:</strong>
+                            <ul>
+                                <li>Circle equation: x² + y² = 1 (unit circle)</li>
+                                <li>Quarter circle area = π/4</li>
+                                <li>Random point (x,y) is inside if x² + y² ≤ 1</li>
+                                <li>π = 4 × (inside_count / total_count)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Riemann Sum Principle:</strong>
+                            <ul>
+                                <li>Quarter circle function: f(x) = √(1-x²) for 0 ≤ x ≤ 1</li>
+                                <li>Area under curve = ∫₀¹ √(1-x²) dx = π/4</li>
+                                <li>Approximation: Σ f(xᵢ) × Δx where Δx = 1/n</li>
+                                <li>π ≈ 4 × Σ √(1-xᵢ²) × (1/n)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Accuracy Factors:</strong>
+                            <ul>
+                                <li>Monte Carlo: Statistical method - accuracy improves with √n</li>
+                                <li>Riemann Sum: Deterministic method - accuracy improves with n</li>
+                                <li>Both methods converge to true π value with sufficient precision</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="feature-section">
+                    <h3>⚡ Parallel Computing Benefits</h3>
+                    <ul>
+                        <li><strong>Linear Scalability:</strong> Both algorithms are "embarrassingly parallel" - perfect for MPI</li>
+                        <li><strong>Load Balancing:</strong> Work divided equally among processes (points_per_process = total/num_processes)</li>
+                        <li><strong>Minimal Communication:</strong> Only initial scatter and final reduce operations</li>
+                        <li><strong>Independent Computation:</strong> Processes don't need to communicate during calculation phase</li>
+                        <li><strong>Speedup Potential:</strong> Near-linear speedup possible with sufficient work per process</li>
+                        <li><strong>Real-world Applications:</strong> Same patterns used in weather simulation, financial modeling, etc.</li>
+                    </ul>
+                </div>
+
+                <div class="feature-section">
+                    <h3>🎯 Recommended Experiments</h3>
+                    <ol>
+                        <li><strong>Method Comparison:</strong>
+                            <ul>
+                                <li>Run both Monte Carlo and Riemann Sum with same precision (10K)</li>
+                                <li>Compare accuracy and visual differences</li>
+                                <li>Observe how each method approximates π</li>
+                            </ul>
+                        </li>
+                        <li><strong>Precision Impact:</strong>
+                            <ul>
+                                <li>Start with 1K precision, gradually increase to 1M</li>
+                                <li>Watch accuracy improve with higher precision</li>
+                                <li>Note computational time differences</li>
+                            </ul>
+                        </li>
+                        <li><strong>Parallel Efficiency:</strong>
+                            <ul>
+                                <li>Test same problem with 2, 4, 8, and 16 processes</li>
+                                <li>Observe communication overhead vs computation time</li>
+                                <li>Find optimal process count for different precision levels</li>
+                            </ul>
+                        </li>
+                        <li><strong>Statistical Analysis:</strong>
+                            <ul>
+                                <li>Run multiple Monte Carlo simulations with same parameters</li>
+                                <li>Compare variation in results (random nature)</li>
+                                <li>Notice Riemann Sum gives consistent results</li>
+                            </ul>
+                        </li>
+                        <li><strong>Visual Learning:</strong>
+                            <ul>
+                                <li>Use slow animation speed (0.5x) to watch point placement</li>
+                                <li>Observe pattern formation in both visualizations</li>
+                                <li>See how process colors distribute work visually</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="feature-section">
+                    <h3>💾 MPI Code Download</h3>
+                    <ul>
+                        <li><strong>Complete Implementation:</strong> Working MPI C code for both calculation methods</li>
+                        <li><strong>Educational Structure:</strong> Clear separation of scatter, compute, and reduce phases</li>
+                        <li><strong>Performance Timing:</strong> Built-in timing functions to measure parallel efficiency</li>
+                        <li><strong>Random Number Generation:</strong> Proper parallel random number handling</li>
+                        <li><strong>Error Handling:</strong> Robust MPI error checking and cleanup</li>
+                        <li><strong>Compilation Guide:</strong> Instructions for mpicc compilation and mpirun execution</li>
+                    </ul>
+                </div>
+
+                <div class="feature-section">
+                    <h3>🔍 Key Learning Outcomes</h3>
+                    <ul>
+                        <li><strong>Parallel Algorithm Design:</strong> How to structure problems for parallel execution</li>
+                        <li><strong>MPI Communication Patterns:</strong> Scatter-compute-reduce paradigm</li>
+                        <li><strong>Load Balancing:</strong> Importance of equal work distribution</li>
+                        <li><strong>Numerical Methods:</strong> Different approaches to same mathematical problem</li>
+                        <li><strong>Accuracy vs Performance:</strong> Trade-offs between precision and computation time</li>
+                        <li><strong>Statistical vs Deterministic:</strong> Understanding different computational approaches</li>
+                        <li><strong>Scalability Analysis:</strong> How performance changes with more processes</li>
+                    </ul>
+                </div>
+
+                <div class="feature-section">
+                    <h3>❓ Frequently Asked Questions</h3>
+                    <ul>
+                        <li><strong>Q: Why do Monte Carlo results vary each run?</strong> A: Random sampling means different points each time</li>
+                        <li><strong>Q: Which method is more accurate?</strong> A: Riemann Sum is deterministic; Monte Carlo converges statistically</li>
+                        <li><strong>Q: Why use parallel computing for π?</strong> A: Educational example of perfectly parallel algorithms</li>
+                        <li><strong>Q: How does this relate to real supercomputing?</strong> A: Same MPI patterns used in weather, physics, and engineering simulations</li>
+                        <li><strong>Q: What's the optimal number of processes?</strong> A: Depends on problem size - more work per process = better efficiency</li>
+                        <li><strong>Q: Why are some visualizations limited?</strong> A: Performance reasons - showing every point would slow the browser</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+<script src="../assets/js/iframeResize.js"></script>
+        
+        </body>
+</html>

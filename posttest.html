@@ -1,0 +1,1083 @@
+<!DOCTYPE html><html lang="en"><head>
+      <!--Google Tag Manager-->
+      <script class="gtm">
+        var dataLayer = [{
+        'labName': 'Virtual Lab',
+        'discipline': 'Test',
+        'college': 'IIITH',
+        'phase': 'Testing',
+        'expName': 'COMPUTING PI USING THE MONTE CARLO METHOD',
+        'expShortName': 'computing-pi'
+        }];
+    
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5NMQ9NQ');
+      </script>
+      <!--End Google Tag Manager-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    
+    	<meta name="experiment-short-name" content="computing-pi">
+    	<meta name="developer-institute" content="IIITH">
+    	<meta name="learning-unit" content="COMPUTING PI USING THE MONTE CARLO METHOD">
+    	<meta name="task-name" content="Posttest">
+    
+    <!-- For iPhone -->
+    <meta name="msapplication-TileColor" content="#4076e0">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#4076e0">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#4076e0">
+    <title>Virtual Labs</title>
+    <link rel="shortcut icon" href="./assets/images/favicon.ico">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css" integrity="sha512-Oy18vBnbSJkXTndr2n6lDMO5NN31UljR8e/ICzVPrGpSud4Gkckb8yUpqhKuUNoE+o9gAb4O/rAxxw1ojyUVzg==" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Raleway&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/github-markdown.min.css">
+    <link rel="stylesheet" href="./assets/css/vlabs-style.css">
+    <link rel="stylesheet" href="./assets/css/toast.css">
+    <link rel="stylesheet" href="./assets/katex_assets/katex.min.css">
+    
+    <script src="./assets/js/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+      h1 {
+      font-size: 1.8rem;
+      }
+      h2 {
+      font-size: 1.4rem;
+      }
+      h3 {
+      font-size: 1.2rem;
+      }
+
+      h2, h3 {
+      font-weight: 800;
+      }
+    </style>
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"></head>
+  <body class="p-0 container-fluid vlabs-page d-flex flex-column justify-content-between">
+      <!--Google Tag Manager (noscript)-->
+      <noscript class="gtm">
+        <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-5NMQ9NQ" style="display:none;visibility:hidden" width="0">
+        </iframe>
+      </noscript>
+      <!--End Google Tag Manager (noscript)-->
+  
+      <header class="vlabs-header sticky-top bg-white">
+        <nav class="p-0 navbar navbar-light d-flex align-items-stretch">
+          
+          <button class="navbar-toggler px-4" type="button" onclick="toggle()">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="d-flex justify-content-center">        
+            <a href="https://vlab.co.in" class="navbar-brand">
+              <img src="./assets/images/vlabs-color-small-moe.jpg" alt="vlabs logo" class="vlabs-logo">
+            </a>
+          </div>
+          
+          <div id="headerNavbar" class="d-none border-top flex-grow-1 d-lg-flex align-items-center justify-content-end">
+            <div class="svc-rating-display">
+                <rating-display spreadsheetid="1x12nhpp0QvnsA6x-O1sV4IA9SAbfVsq_wiexWkutOmU" sheetname="Experiment-Database" columnname="Experiment Short Name" columnvalue="computing-pi" imagesdirectory="/plugins/svc-rating/images/">
+                </rating-display>
+            </div>      <div class="svc-rating-submit">
+                <rating-submit title="Rate" this="" experiment="">
+                </rating-submit>
+            </div>      <bug-report id="bug-report" title="[BUG REPORT] COMPUTING PI USING THE MONTE CARLO METHOD" page-type="assesment" context-info="{&quot;organisation&quot;:&quot;Virtual Labs&quot;,&quot;developer_institute&quot;:&quot;IIITH&quot;,&quot;expname&quot;:&quot;COMPUTING PI USING THE MONTE CARLO METHOD&quot;,&quot;labname&quot;:&quot;Virtual Lab&quot;,&quot;phase&quot;:&quot;Testing&quot;}" checkbox-json="{&quot;text&quot;:[&quot;Insufficient Content&quot;],&quot;video&quot;:[&quot;Insufficient Content&quot;],&quot;assesment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;assessment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;simulation&quot;:[&quot;Simulation Not Working&quot;,&quot;Incorrect Results/Observations&quot;,&quot;Insufficient/Incorrect Instructions&quot;],&quot;DEFAULT&quot;:[&quot;Page Not Loading&quot;,&quot;Content Not Visible&quot;,&quot;Incorrect Content&quot;]}" button_style="border: none; color: #fff; background-color: #288ec8; text-align: center; font-size: 1.05rem; border-radius: 1em;padding: 0.6em 1.2em; margin: 0 10px" position="override" custom_button_class="v-button"></bug-report>
+          </div>
+        </nav>
+      </header>
+      <div class="container-fluid flex-fill d-flex flex-column vlabs-page-main">
+        <div class="row d-flex justify-content-between">
+          <div class="flex-column">
+          <div class="row py-4 px-4 breadcrumbs">
+          	<div class="title is-4 tools">Tools</div>
+          	<span class="mx-2">
+          		<i aria-hidden="true" class="fa fa-angle-right"></i>
+          	</span>
+          	<a href="performance-report.html" class="my-2 mx-3" target="_blank">
+          		<button class="v-button">Performance Tool</button>
+          	</a>
+          	<a href="validator-report.html" class="my-2 mx-3" target="_blank">
+          		<button class="v-button">Validation Tool</button>
+          	</a>
+          </div>
+          </div>
+        </div>
+        <div class="row flex-grow-1 d-flex flex-nowrap flex-column flex-lg-row">
+          <div class="modal fade popupmenu" id="popupMenu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">
+                              <a href="https://vlab.co.in" class="navbar-brand">
+                                  <img src="./assets/images/vlabs-color-small-moe.jpg" alt="vlabs logo" class="vlabs-logo">
+                              </a>
+                          </h5>
+                          <button type="button" class="btn-close align-self-center" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body nav-menu">
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="index.html" class="p-2 ">
+                                      Aim
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="theory.html" class="p-2 ">
+                                      Theory
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="pretest.html" class="p-2 ">
+                                      Pretest
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="procedure.html" class="p-2 ">
+                                      Procedure
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="simulation.html" class="p-2 ">
+                                      Simulation
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="posttest.html" class="p-2  current-item ">
+                                      Posttest
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="references.html" class="p-2 ">
+                                      References
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="contributors.html" class="p-2 ">
+                                      Contributors
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="feedback.html" class="p-2 ">
+                                      Feedback
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="nav flex-column sidebar nav-menu flex-shrink-0 px-lg-4 align-items-center align-items-lg-start hidden d-none d-lg-flex" id="menu">
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="index.html" class="p-2 ">
+                        Aim
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="theory.html" class="p-2 ">
+                        Theory
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="pretest.html" class="p-2 ">
+                        Pretest
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="procedure.html" class="p-2 ">
+                        Procedure
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="simulation.html" class="p-2 ">
+                        Simulation
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="posttest.html" class="p-2  current-item ">
+                        Posttest
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="references.html" class="p-2 ">
+                        References
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="contributors.html" class="p-2 ">
+                        Contributors
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="feedback.html" class="p-2 ">
+                        Feedback
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+          </div>          <div class="vlabs-page-content px-5 pb-4 flex-grow-1 markdown-body">
+            <div class="text-center fix-spacing">
+              <h2 id="computing-pi-using-the-monte-carlo-method">Computing Pi using the Monte Carlo Method</h2>
+          
+            </div>
+                  <div id="difficulty-container" style="border-bottom: 1px solid #eaecef; padding-bottom: .3em; margin: 0" class="row">
+                    <div id="difficulty-label" class="col-12 col-md-3" style="display:none"><strong>Choose difficulty: </strong></div>
+                    <div class="form-check col-12 col-md-3" style="display:none">
+                      <input id="beginner" type="checkbox" value="">
+                      <label class="form-check-label" for="flexCheckDefault">
+                        <strong>Beginner</strong>
+                      </label>
+                    </div>
+                    <div class="form-check col-12 col-md-3" style="display:none">
+                      <input id="intermediate" type="checkbox" value="">
+                      <label class="form-check-label" for="flexCheckDefault">
+                        <strong>Intermediate</strong>
+                      </label>
+                    </div>
+                    <div class="form-check col-12 col-md-3" style="display:none">
+                      <input id="advanced" type="checkbox" value="">
+                      <label class="form-check-label" for="flexCheckDefault">
+                        <strong>Advanced</strong>
+                      </label>
+                    </div>
+                  </div>
+                  
+                  <div id="quiz" class="versiontrue" style="margin-top: 1rem">
+                
+                
+                  <div class="question beginner">
+                    What is the relationship between the radius and diameter of a circle?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer0a">
+                      <label>
+                        <input type="radio" name="question0" value="a">
+                        a: The diameter is twice the radius
+                      </label>
+                      <a href="#" id="explanation0a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer0b">
+                      <label>
+                        <input type="radio" name="question0" value="b">
+                        b: The radius is twice the diameter
+                      </label>
+                      <a href="#" id="explanation0b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer0c">
+                      <label>
+                        <input type="radio" name="question0" value="c">
+                        c: The radius and diameter are equal
+                      </label>
+                      <a href="#" id="explanation0c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer0d">
+                      <label>
+                        <input type="radio" name="question0" value="d">
+                        d: The diameter is half the radius
+                      </label>
+                      <a href="#" id="explanation0d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question beginner">
+                    If a square has a side length of 4 units, what is its area?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer1a">
+                      <label>
+                        <input type="radio" name="question1" value="a">
+                        a: 16 square units
+                      </label>
+                      <a href="#" id="explanation1a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer1b">
+                      <label>
+                        <input type="radio" name="question1" value="b">
+                        b: 8 square units
+                      </label>
+                      <a href="#" id="explanation1b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer1c">
+                      <label>
+                        <input type="radio" name="question1" value="c">
+                        c: 12 square units
+                      </label>
+                      <a href="#" id="explanation1c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer1d">
+                      <label>
+                        <input type="radio" name="question1" value="d">
+                        d: 4 square units
+                      </label>
+                      <a href="#" id="explanation1d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question beginner">
+                    The value of Pi is approximately...
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer2a">
+                      <label>
+                        <input type="radio" name="question2" value="a">
+                        a: 3.14159
+                      </label>
+                      <a href="#" id="explanation2a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer2b">
+                      <label>
+                        <input type="radio" name="question2" value="b">
+                        b: 2.71828
+                      </label>
+                      <a href="#" id="explanation2b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer2c">
+                      <label>
+                        <input type="radio" name="question2" value="c">
+                        c: 1.61803
+                      </label>
+                      <a href="#" id="explanation2c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer2d">
+                      <label>
+                        <input type="radio" name="question2" value="d">
+                        d: 1.41421
+                      </label>
+                      <a href="#" id="explanation2d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    Why is the Monte Carlo method considered a probabilistic method?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer3a">
+                      <label>
+                        <input type="radio" name="question3" value="a">
+                        a: Because it uses random numbers to find a solution
+                      </label>
+                      <a href="#" id="explanation3a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer3b">
+                      <label>
+                        <input type="radio" name="question3" value="b">
+                        b: Because it always gives the exact same answer
+                      </label>
+                      <a href="#" id="explanation3b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer3c">
+                      <label>
+                        <input type="radio" name="question3" value="c">
+                        c: Because it is a very old method
+                      </label>
+                      <a href="#" id="explanation3c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer3d">
+                      <label>
+                        <input type="radio" name="question3" value="d">
+                        d: Because it was invented by a gambler
+                      </label>
+                      <a href="#" id="explanation3d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    In the context of the Pi experiment, what does a point being 'inside the circle' mean?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer4a">
+                      <label>
+                        <input type="radio" name="question4" value="a">
+                        a: Its distance from the center is less than the radius
+                      </label>
+                      <a href="#" id="explanation4a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer4b">
+                      <label>
+                        <input type="radio" name="question4" value="b">
+                        b: Its distance from the center is greater than the radius
+                      </label>
+                      <a href="#" id="explanation4b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer4c">
+                      <label>
+                        <input type="radio" name="question4" value="c">
+                        c: Its distance from the center is equal to the radius
+                      </label>
+                      <a href="#" id="explanation4c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer4d">
+                      <label>
+                        <input type="radio" name="question4" value="d">
+                        d: It is colored red
+                      </label>
+                      <a href="#" id="explanation4d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    If the area of the square is 4 and the area of the inscribed circle is π, what is the ratio of the areas?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer5a">
+                      <label>
+                        <input type="radio" name="question5" value="a">
+                        a: π/4
+                      </label>
+                      <a href="#" id="explanation5a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer5b">
+                      <label>
+                        <input type="radio" name="question5" value="b">
+                        b: 4/π
+                      </label>
+                      <a href="#" id="explanation5b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer5c">
+                      <label>
+                        <input type="radio" name="question5" value="c">
+                        c: π
+                      </label>
+                      <a href="#" id="explanation5c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer5d">
+                      <label>
+                        <input type="radio" name="question5" value="d">
+                        d: 4
+                      </label>
+                      <a href="#" id="explanation5d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question advanced">
+                    If you run the experiment twice with 1000 points each time, would you expect to get the exact same estimate for Pi? Why?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer6a">
+                      <label>
+                        <input type="radio" name="question6" value="a">
+                        a: No, because the points are generated randomly each time
+                      </label>
+                      <a href="#" id="explanation6a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer6b">
+                      <label>
+                        <input type="radio" name="question6" value="b">
+                        b: Yes, because the number of points is the same
+                      </label>
+                      <a href="#" id="explanation6b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer6c">
+                      <label>
+                        <input type="radio" name="question6" value="c">
+                        c: Yes, because the formula for Pi is constant
+                      </label>
+                      <a href="#" id="explanation6c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer6d">
+                      <label>
+                        <input type="radio" name="question6" value="d">
+                        d: No, because the computer makes errors
+                      </label>
+                      <a href="#" id="explanation6d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question advanced">
+                    If you wanted to estimate the value of Pi to a very high degree of accuracy using this method, what would you need to do?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer7a">
+                      <label>
+                        <input type="radio" name="question7" value="a">
+                        a: Generate a very large number of points
+                      </label>
+                      <a href="#" id="explanation7a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer7b">
+                      <label>
+                        <input type="radio" name="question7" value="b">
+                        b: Use a very small number of points
+                      </label>
+                      <a href="#" id="explanation7b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer7c">
+                      <label>
+                        <input type="radio" name="question7" value="c">
+                        c: Use a faster computer
+                      </label>
+                      <a href="#" id="explanation7c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer7d">
+                      <label>
+                        <input type="radio" name="question7" value="d">
+                        d: Use a different shape instead of a circle
+                      </label>
+                      <a href="#" id="explanation7d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question advanced">
+                    Imagine you have a 3D sphere inscribed in a cube. How could you adapt the Monte Carlo method to estimate Pi?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer8a">
+                      <label>
+                        <input type="radio" name="question8" value="a">
+                        a: Generate random points in the cube and find the ratio of points inside the sphere to the total points
+                      </label>
+                      <a href="#" id="explanation8a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer8b">
+                      <label>
+                        <input type="radio" name="question8" value="b">
+                        b: It's not possible to use the Monte Carlo method in 3D
+                      </label>
+                      <a href="#" id="explanation8b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer8c">
+                      <label>
+                        <input type="radio" name="question8" value="c">
+                        c: Draw a 2D projection and use the same method
+                      </label>
+                      <a href="#" id="explanation8c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer8d">
+                      <label>
+                        <input type="radio" name="question8" value="d">
+                        d: Count the vertices of the cube and sphere
+                      </label>
+                      <a href="#" id="explanation8d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question advanced">
+                    What is the primary source of error when estimating Pi using the Monte Carlo method?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer9a">
+                      <label>
+                        <input type="radio" name="question9" value="a">
+                        a: Statistical sampling error due to finite number of random points
+                      </label>
+                      <a href="#" id="explanation9a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer9b">
+                      <label>
+                        <input type="radio" name="question9" value="b">
+                        b: The computer's inability to draw perfect circles
+                      </label>
+                      <a href="#" id="explanation9b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer9c">
+                      <label>
+                        <input type="radio" name="question9" value="c">
+                        c: Rounding errors in the value of Pi itself
+                      </label>
+                      <a href="#" id="explanation9c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer9d">
+                      <label>
+                        <input type="radio" name="question9" value="d">
+                        d: The square not being perfectly aligned
+                      </label>
+                      <a href="#" id="explanation9d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    If your experiment with 10,000 points gives an estimate of Pi = 3.15, and another run gives Pi = 3.13, what does this tell you?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer10a">
+                      <label>
+                        <input type="radio" name="question10" value="a">
+                        a: Both estimates are reasonable given the random nature of the method
+                      </label>
+                      <a href="#" id="explanation10a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer10b">
+                      <label>
+                        <input type="radio" name="question10" value="b">
+                        b: One of the experiments must have an error in the code
+                      </label>
+                      <a href="#" id="explanation10b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer10c">
+                      <label>
+                        <input type="radio" name="question10" value="c">
+                        c: The true value of Pi changes between experiments
+                      </label>
+                      <a href="#" id="explanation10c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer10d">
+                      <label>
+                        <input type="radio" name="question10" value="d">
+                        d: You should always use the higher estimate
+                      </label>
+                      <a href="#" id="explanation10d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question advanced">
+                    How does the convergence rate of the Monte Carlo method for Pi compare as you increase the number of points?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer11a">
+                      <label>
+                        <input type="radio" name="question11" value="a">
+                        a: The error decreases proportionally to 1/√n, where n is the number of points
+                      </label>
+                      <a href="#" id="explanation11a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer11b">
+                      <label>
+                        <input type="radio" name="question11" value="b">
+                        b: The error decreases proportionally to 1/n, where n is the number of points
+                      </label>
+                      <a href="#" id="explanation11b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer11c">
+                      <label>
+                        <input type="radio" name="question11" value="c">
+                        c: The error remains constant regardless of the number of points
+                      </label>
+                      <a href="#" id="explanation11c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer11d">
+                      <label>
+                        <input type="radio" name="question11" value="d">
+                        d: The error increases as you add more points
+                      </label>
+                      <a href="#" id="explanation11d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question advanced">
+                    Which of the following would NOT improve the accuracy of the Monte Carlo estimation of Pi?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer12a">
+                      <label>
+                        <input type="radio" name="question12" value="a">
+                        a: Using a larger square while keeping the circle size the same
+                      </label>
+                      <a href="#" id="explanation12a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer12b">
+                      <label>
+                        <input type="radio" name="question12" value="b">
+                        b: Increasing the number of random points generated
+                      </label>
+                      <a href="#" id="explanation12b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer12c">
+                      <label>
+                        <input type="radio" name="question12" value="c">
+                        c: Running multiple experiments and averaging the results
+                      </label>
+                      <a href="#" id="explanation12c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer12d">
+                      <label>
+                        <input type="radio" name="question12" value="d">
+                        d: Using a better random number generator
+                      </label>
+                      <a href="#" id="explanation12d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    What practical limitation might you encounter when trying to use 1 billion points to estimate Pi?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer13a">
+                      <label>
+                        <input type="radio" name="question13" value="a">
+                        a: Computational time and memory resources required
+                      </label>
+                      <a href="#" id="explanation13a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer13b">
+                      <label>
+                        <input type="radio" name="question13" value="b">
+                        b: The estimate would become less accurate with too many points
+                      </label>
+                      <a href="#" id="explanation13b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer13c">
+                      <label>
+                        <input type="radio" name="question13" value="c">
+                        c: The random number generator would stop working
+                      </label>
+                      <a href="#" id="explanation13c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer13d">
+                      <label>
+                        <input type="radio" name="question13" value="d">
+                        d: The circle would become too large to fit in the square
+                      </label>
+                      <a href="#" id="explanation13d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question advanced">
+                    If you observe that points are clustering in certain regions of the square rather than being uniformly distributed, what is the most likely cause?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer14a">
+                      <label>
+                        <input type="radio" name="question14" value="a">
+                        a: Poor quality random number generator producing biased samples
+                      </label>
+                      <a href="#" id="explanation14a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer14b">
+                      <label>
+                        <input type="radio" name="question14" value="b">
+                        b: The mathematical formula for Pi is incorrect
+                      </label>
+                      <a href="#" id="explanation14b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer14c">
+                      <label>
+                        <input type="radio" name="question14" value="c">
+                        c: Too many points are being generated
+                      </label>
+                      <a href="#" id="explanation14c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer14d">
+                      <label>
+                        <input type="radio" name="question14" value="d">
+                        d: The circle is not perfectly round
+                      </label>
+                      <a href="#" id="explanation14d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+                
+                  <div class="question intermediate">
+                    Why is the Monte Carlo method particularly useful for complex problems in science and engineering?
+                  </div>
+                  
+                  <div class="answers">
+                    <div id="answer15a">
+                      <label>
+                        <input type="radio" name="question15" value="a">
+                        a: It can provide approximate solutions to problems that are difficult or impossible to solve analytically
+                      </label>
+                      <a href="#" id="explanation15a" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer15b">
+                      <label>
+                        <input type="radio" name="question15" value="b">
+                        b: It always gives exact answers faster than other methods
+                      </label>
+                      <a href="#" id="explanation15b" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer15c">
+                      <label>
+                        <input type="radio" name="question15" value="c">
+                        c: It doesn't require any mathematical knowledge
+                      </label>
+                      <a href="#" id="explanation15c" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                    <div id="answer15d">
+                      <label>
+                        <input type="radio" name="question15" value="d">
+                        d: It only works for estimating Pi
+                      </label>
+                      <a href="#" id="explanation15d" class="accordion" onclick="return false;">Explanation</a>
+                    </div>
+                    <p class="panel">Explanation</p>
+                </div>
+               </div>
+                <button id="submit" class="btn btn-primary">Submit Quiz</button>
+                <div id="results"></div>
+          </div>
+            
+            <script>
+              const myQuestions = [{"question":"What is the relationship between the radius and diameter of a circle?","answers":{"a":"The diameter is twice the radius","b":"The radius is twice the diameter","c":"The radius and diameter are equal","d":"The diameter is half the radius"},"explanations":{"a":"Correct. The diameter is always twice the length of the radius.","b":"Incorrect. This would mean the radius is larger than the diameter.","c":"Incorrect. This is only true for a point, not a circle.","d":"Incorrect. This is the reverse of the correct relationship."},"correctAnswer":"a","difficulty":"beginner"},{"question":"If a square has a side length of 4 units, what is its area?","answers":{"a":"16 square units","b":"8 square units","c":"12 square units","d":"4 square units"},"explanations":{"a":"Correct. The area of a square is side * side, so 4 * 4 = 16.","b":"Incorrect. This would be the perimeter of a square with side length 2.","c":"Incorrect. This is not the area of the square.","d":"Incorrect. This is the side length, not the area."},"correctAnswer":"a","difficulty":"beginner"},{"question":"The value of Pi is approximately...","answers":{"a":"3.14159","b":"2.71828","c":"1.61803","d":"1.41421"},"explanations":{"a":"Correct. This is a common approximation of Pi.","b":"Incorrect. This is the value of Euler's number, e.","c":"Incorrect. This is the golden ratio.","d":"Incorrect. This is the square root of 2."},"correctAnswer":"a","difficulty":"beginner"},{"question":"Why is the Monte Carlo method considered a probabilistic method?","answers":{"a":"Because it uses random numbers to find a solution","b":"Because it always gives the exact same answer","c":"Because it is a very old method","d":"Because it was invented by a gambler"},"explanations":{"a":"Correct. The use of random sampling is the defining characteristic of Monte Carlo methods.","b":"Incorrect. Due to its random nature, it gives slightly different results each time.","c":"Incorrect. Its age doesn't make it probabilistic.","d":"Incorrect. While it has roots in games of chance, that's not the reason for the name."},"correctAnswer":"a","difficulty":"intermediate"},{"question":"In the context of the Pi experiment, what does a point being 'inside the circle' mean?","answers":{"a":"Its distance from the center is less than the radius","b":"Its distance from the center is greater than the radius","c":"Its distance from the center is equal to the radius","d":"It is colored red"},"explanations":{"a":"Correct. A point is inside the circle if its distance from the center is less than the circle's radius.","b":"Incorrect. This would mean the point is outside the circle.","c":"Incorrect. This would mean the point is on the circle's circumference.","d":"Incorrect. The color is just for visualization."},"correctAnswer":"a","difficulty":"intermediate"},{"question":"If the area of the square is 4 and the area of the inscribed circle is π, what is the ratio of the areas?","answers":{"a":"π/4","b":"4/π","c":"π","d":"4"},"explanations":{"a":"Correct. The ratio is Area(circle) / Area(square) = π / 4.","b":"Incorrect. This is the reciprocal of the correct ratio.","c":"Incorrect. This is the area of the circle.","d":"Incorrect. This is the area of the square."},"correctAnswer":"a","difficulty":"intermediate"},{"question":"If you run the experiment twice with 1000 points each time, would you expect to get the exact same estimate for Pi? Why?","answers":{"a":"No, because the points are generated randomly each time","b":"Yes, because the number of points is the same","c":"Yes, because the formula for Pi is constant","d":"No, because the computer makes errors"},"explanations":{"a":"Correct. The random nature of the point generation will lead to slightly different outcomes.","b":"Incorrect. The number of points affects the accuracy, but not the exact outcome.","c":"Incorrect. The formula is constant, but the random sampling is not.","d":"Incorrect. While computers can make errors, the primary reason for the difference is the randomness."},"correctAnswer":"a","difficulty":"advanced"},{"question":"If you wanted to estimate the value of Pi to a very high degree of accuracy using this method, what would you need to do?","answers":{"a":"Generate a very large number of points","b":"Use a very small number of points","c":"Use a faster computer","d":"Use a different shape instead of a circle"},"explanations":{"a":"Correct. The more points you use, the closer your approximation will be to the true value of Pi. <a href='https://en.wikipedia.org/wiki/Law_of_large_numbers' target='_blank'>Read more here.</a>","b":"Incorrect. A small number of points will give a very rough estimate.","c":"Incorrect. A faster computer will do the calculation quicker, but won't improve the accuracy for a given number of points.","d":"Incorrect. The relationship between the circle and square is key to this method."},"correctAnswer":"a","difficulty":"advanced"},{"question":"Imagine you have a 3D sphere inscribed in a cube. How could you adapt the Monte Carlo method to estimate Pi?","answers":{"a":"Generate random points in the cube and find the ratio of points inside the sphere to the total points","b":"It's not possible to use the Monte Carlo method in 3D","c":"Draw a 2D projection and use the same method","d":"Count the vertices of the cube and sphere"},"explanations":{"a":"Correct. The ratio of the volumes (Volume(sphere) / Volume(cube)) can be used to estimate Pi. The volume of a sphere is (4/3)πr^3 and a cube is (2r)^3 = 8r^3. The ratio is (4/3)πr^3 / 8r^3 = π/6.","b":"Incorrect. The Monte Carlo method is applicable in any number of dimensions.","c":"Incorrect. A 2D projection would not capture the 3D nature of the problem.","d":"Incorrect. Counting vertices would not give an estimate of Pi."},"correctAnswer":"a","difficulty":"advanced"},{"question":"What is the primary source of error when estimating Pi using the Monte Carlo method?","answers":{"a":"Statistical sampling error due to finite number of random points","b":"The computer's inability to draw perfect circles","c":"Rounding errors in the value of Pi itself","d":"The square not being perfectly aligned"},"explanations":{"a":"Correct. The main source of error is that we're using a finite sample to estimate a theoretical ratio, leading to statistical variance.","b":"Incorrect. We're not actually drawing circles; we're using mathematical calculations.","c":"Incorrect. We're estimating Pi, not using its value in calculations.","d":"Incorrect. The alignment is mathematically defined and precise."},"correctAnswer":"a","difficulty":"advanced"},{"question":"If your experiment with 10,000 points gives an estimate of Pi = 3.15, and another run gives Pi = 3.13, what does this tell you?","answers":{"a":"Both estimates are reasonable given the random nature of the method","b":"One of the experiments must have an error in the code","c":"The true value of Pi changes between experiments","d":"You should always use the higher estimate"},"explanations":{"a":"Correct. Random sampling naturally produces variation around the true value. Both estimates are within expected statistical bounds.","b":"Incorrect. Variation in results is expected and normal for Monte Carlo methods.","c":"Incorrect. Pi is a mathematical constant that never changes.","d":"Incorrect. Neither estimate is necessarily better; averaging multiple runs might give a better estimate."},"correctAnswer":"a","difficulty":"intermediate"},{"question":"How does the convergence rate of the Monte Carlo method for Pi compare as you increase the number of points?","answers":{"a":"The error decreases proportionally to 1/√n, where n is the number of points","b":"The error decreases proportionally to 1/n, where n is the number of points","c":"The error remains constant regardless of the number of points","d":"The error increases as you add more points"},"explanations":{"a":"Correct. Monte Carlo methods typically have a convergence rate of O(1/√n), which is relatively slow but applies to any dimensionality.","b":"Incorrect. This would be much faster convergence than Monte Carlo methods typically achieve.","c":"Incorrect. Adding more points definitely improves the estimate.","d":"Incorrect. More points lead to better, not worse, estimates."},"correctAnswer":"a","difficulty":"advanced"},{"question":"Which of the following would NOT improve the accuracy of the Monte Carlo estimation of Pi?","answers":{"a":"Using a larger square while keeping the circle size the same","b":"Increasing the number of random points generated","c":"Running multiple experiments and averaging the results","d":"Using a better random number generator"},"explanations":{"a":"Correct. Changing the ratio between the square and circle would actually break the method, as the mathematical relationship π/4 depends on the circle being inscribed in the square.","b":"Incorrect. More points always improve accuracy on average.","c":"Incorrect. Averaging multiple independent runs reduces variance and improves the estimate.","d":"Incorrect. A better random number generator ensures better distribution of points."},"correctAnswer":"a","difficulty":"advanced"},{"question":"What practical limitation might you encounter when trying to use 1 billion points to estimate Pi?","answers":{"a":"Computational time and memory resources required","b":"The estimate would become less accurate with too many points","c":"The random number generator would stop working","d":"The circle would become too large to fit in the square"},"explanations":{"a":"Correct. Generating, processing, and potentially storing information about 1 billion points requires significant computational resources and time.","b":"Incorrect. More points generally lead to better accuracy, not worse.","c":"Incorrect. Modern random number generators can produce far more than 1 billion numbers.","d":"Incorrect. The size of the shapes is abstract and doesn't depend on the number of points."},"correctAnswer":"a","difficulty":"intermediate"},{"question":"If you observe that points are clustering in certain regions of the square rather than being uniformly distributed, what is the most likely cause?","answers":{"a":"Poor quality random number generator producing biased samples","b":"The mathematical formula for Pi is incorrect","c":"Too many points are being generated","d":"The circle is not perfectly round"},"explanations":{"a":"Correct. Non-uniform distribution of points indicates the random number generator is not producing truly random or pseudo-random numbers with uniform distribution.","b":"Incorrect. The formula doesn't affect point distribution.","c":"Incorrect. More points wouldn't cause clustering if properly randomized.","d":"Incorrect. The circle's definition is mathematical and perfect."},"correctAnswer":"a","difficulty":"advanced"},{"question":"Why is the Monte Carlo method particularly useful for complex problems in science and engineering?","answers":{"a":"It can provide approximate solutions to problems that are difficult or impossible to solve analytically","b":"It always gives exact answers faster than other methods","c":"It doesn't require any mathematical knowledge","d":"It only works for estimating Pi"},"explanations":{"a":"Correct. Monte Carlo methods excel at solving high-dimensional problems, integration, and optimization where analytical solutions are impractical or impossible.","b":"Incorrect. Monte Carlo gives approximate, not exact, answers and may not always be the fastest method.","c":"Incorrect. Understanding probability, statistics, and the underlying problem requires mathematical knowledge.","d":"Incorrect. Monte Carlo methods are used in physics, finance, machine learning, and many other fields."},"correctAnswer":"a","difficulty":"intermediate"}];
+            </script>
+              <script src="./assets/js/assessment_v2.js"></script>  
+          <div class="bug-report-mobile">
+              <bug-report id="bug-report" title="[BUG REPORT] COMPUTING PI USING THE MONTE CARLO METHOD" page-type="assesment" context-info="{&quot;organisation&quot;:&quot;Virtual Labs&quot;,&quot;developer_institute&quot;:&quot;IIITH&quot;,&quot;expname&quot;:&quot;COMPUTING PI USING THE MONTE CARLO METHOD&quot;,&quot;labname&quot;:&quot;Virtual Lab&quot;,&quot;phase&quot;:&quot;Testing&quot;}" checkbox-json="{&quot;text&quot;:[&quot;Insufficient Content&quot;],&quot;video&quot;:[&quot;Insufficient Content&quot;],&quot;assesment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;assessment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;simulation&quot;:[&quot;Simulation Not Working&quot;,&quot;Incorrect Results/Observations&quot;,&quot;Insufficient/Incorrect Instructions&quot;],&quot;DEFAULT&quot;:[&quot;Page Not Loading&quot;,&quot;Content Not Visible&quot;,&quot;Incorrect Content&quot;]}" position="override" button_style="
+                          position: fixed; 
+                          bottom: 20px;
+                          right: 20px;
+                          z-index: 1;
+                          font-size: 0;
+                          padding: 25px;
+                          border-radius: 50%;
+                          border: none;
+                          background-color: #0fc0ff;
+                          background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAAAXNSR0IArs4c6QAABiFJREFUaEPFmVuMFEUUhv/TM7uwoBGVyG22u7ZnYGG5REETo8RA1BhFIka8ABFf0PCgDxhFEpCLqAlE1OiTiSj4gFGjD0QBETQaEqPRICALSHdPV+8YQQJBA+wuO1PHdMNcWGame2ZWqMfuc/nq1KlT1acJAzhShjFVAUsYdL8G3HjRdA7gHwna5uahLR91dnaeb9QlNWrA1+/o6GjuPnv2DQ30LICKNhk4qLF63PK8g434rejATJhjKa6m9WazOzOZzKlKTmYAcc8QnxEwJwqIAk5STpvpZJwD1eTHjR43PKflhtkZ2+ovVxbaTJiTSVM/gzCYGIebu4fc1nmi80w5J0nDWA7Qq1GACzLMR3pV7pZMJtNdTs/UzelE6msAQ0BYb7vuS6VyZaGTungGhPfygkRYZ7nusv4OEonEDc2xuEfA0JqgATBhieO6b/fXE0IM1pgPECgVvGP+x/bksFDo1JhUguPZI8FMAz0+zzFtSjqd9p8VRlJvew7E79QKHNgEDjrSndRfNyXEGmasLK4KttmeOysU2hdIGm0vA/xKUZh32VLeW6psCrGMmO+uB5qIeEh398P7jx8/m9cP9pGm9vtpmQ9WjHDzUSkPRYJOpVKDuK9vP0Dj8goMfsSR8ot6IKPoJI22XUBpEHitLWUx6heNVC15pmHMItCXBYeKPUZsLlFWVYNQsVg2nU7v82XaW1tHZ4lGhUEztOlEKOQ4A/b5XHZyuc0aWqdNIbYSY3aY00veM/9te3KE/ywlxGpmrKpJP8h5ftCR8qtyeqHQY3XdVNAO5vMskvMGoRWrT9Ke90QlX6HQF6N16Y4OI28Ampn/jatcxx+ZzJ8NQScSiZZBWvzJwAhhJoCKUQhkaoVmnAZoJcC9WowOH02nf6gWl0iRLpQk3ZwOym0n0DVVg10rNAAF7Ig1xedYltUbtpCRoZO6Po1J+z7S6VcHdLCIClusLnfBgED7NVv1ZX8lYGKYwbrSo8Qogxc4Um5pOD1Mo20DgZ+PBFxPTpcYJuBUljDRdd1jdW/EcYnEmKwWSxNR05WADnwo2mB3pV+oGzopxDowlkYGbjDSF9ILpwd1D2mtdB2uuhEv3D+yfwG4/opCB5WVnrZk+v1yfqtCJ3X9TpC2pybggYj0BYcf29KdXwe0WArCuqsCzSxtT4qq0GareStIXXo3JjxGwNSrAh0crMFFq3jYEJ9wpPygkB6mYZwg0PCaAcsp1Hm4RPFtS5eK0LpxvqayVs3DlYIO7r0K8xUhlufRGKNrupLmFQcImsEZBhWaOxq4y5ZyRvXqIcSnYDwaZdkukRkgaGqK32RZ1on+/qt/buliFRFWXxXokonXBJ3S22Yz8darAc2sdjqed1/NddpvnMQUHwPRdTWBD0R6EBbbrltoGJX6D71PJ3V9E0h76kpCMzirNTWNLpfPPkcodNDXi6m9QLGqhE6gwUgzaKMj04sq+QmF9hVrjnYj0IwejmvtjuN4DUEbhjEqztgLoqCXEToagQavsKV8rZqPSJH2DaSEmMGMXZHSpE5oZnzneK7fL8w1DJ1sTU6CltvEwPj/88OWwRYx77Y9b3HD0KYuvqUL/Y5oo85I542TooesrnTF8yE0PUwh5hGj6tfxZTNpEBqKvUE9QyfW9bnV3t5+bV9P7yECxuTBFGOvRn5v5eJgTLzsUhUFmuGCcLJoBiNL/ZT7bVFYiWrrnTSM9QC9WBSmzy2ZnluqI4QYGQcWM/O8Qi+7EjSjB4xtTNqHjuf4HVHO20q1tiZZi/k/j1r8Z8zcRxyfanfZv/dnrJgeYw1jQo6xr+SOfY5j2oRq9VMIIWLA7QSMslz3raDGG8ZMJhoPpR1QmvrFdd2eSoFKGm0rAF5bfM97bCnvKp2c/64idFLXd4C0woWFwMstKV+PthPrk/L/R/aeOfcbCBOKq8uLLCk3llos/0tON+8hUt+U5O1Rao5PjtIcrA+3qOWvDEC78wFlIO1I1wyFTuptC0G8uWSZHrCl3N4oUFT9NiE2a4yFQW6DLUfKsaHQU0aMGHq2pWULM98Bpncdzy35yxXVdf1yftXK9vS8CUVjtBjWHHXdn0qt/Qf/x1JblU8EiAAAAABJRU5ErkJggg==);
+                          background-repeat: no-repeat;
+                          background-position: center;
+                          background-size: 30px;
+                          filter: invert(1);">
+              </bug-report>
+          </div>        </div>
+      </div>
+      <footer class="text-light pt-2 vlabs-footer d-flex flex-column">
+        <div class="row px-5 mx-0">
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Community Links</span>
+            <a href="https://www.sakshat.ac.in/" class="text-light">Sakshat Portal</a>
+            <a href="http://outreach.vlabs.ac.in/" class="text-light">Outreach Portal</a>
+            <a href="https://vlab.co.in/faq" class="text-light">FAQ: Virtual Labs</a>
+          </div>
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Contact Us</span>
+            <span> Phone: General Information: 011-26582050 </span>
+            <span> Email: support@vlabs.ac.in </span>
+          </div>
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Follow Us</span>
+            <div class="social-links">
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #55acee;" href="https://twitter.com/TheVirtualLabs">
+      	  <i class="fab fa-twitter"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #3b5998;" href="https://www.facebook.com/Virtual-Labs-IIT-Delhi-301510159983871/">
+      	  <i class="fab fa-facebook"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #e52d27;" href="https://www.youtube.com/watch?v=asxRaOgk6a0">
+      	  <i class="fab fa-youtube"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #2867B2;" href="https://in.linkedin.com/in/virtual-labs-008ba9136">
+      	  <i class="fab fa-linkedin"></i>
+      	</a>
+            </div>
+          </div>
+        </div>
+        <div class="m-0 py-2 text-center" style="font-family: &quot;Open Sans&quot;, sans-serif; background: #212121;">
+          <a class="text-primary font-weight-bold" href="https://www.gnu.org/licenses/agpl-3.0.en.html"> AGPL 3.0 </a>
+          &nbsp;&amp;&nbsp;
+          <a class="text-primary font-weight-bold" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"> Creative Commons (CC BY-NC-SA 4.0) </a>
+        </div>
+      </footer>
+    <script src="./assets/js/toggleSidebar.js"></script>
+    <script src="./assets/js/event-handler.js"></script>
+
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register("sw.js");
+        });
+      }
+    </script>
+  
+
+<script type="module" src="https://cdn.vlabs.ac.in/bug-report/vlabs-bug-report.js"></script><script type="module" src="/exp-computing-pi-iiith/plugins/svc-rating/index.js"></script><script type="module" src="/exp-computing-pi-iiith/plugins/svc-rating/config.js"></script><script type="module" src="https://apis.google.com/js/api.js"></script></body></html>

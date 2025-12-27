@@ -1,0 +1,158 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "What is the formula for the area of a square with side length 's'?",
+      "answers": {
+        "a": "s^2",
+        "b": "2s",
+        "c": "4s",
+        "d": "s"
+      },
+      "explanations": {
+        "a": "Correct. The area of a square is the side length squared.",
+        "b": "Incorrect. This is the formula for the perimeter of a square.",
+        "c": "Incorrect. This is four times the side length.",
+        "d": "Incorrect. This is just the side length."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the formula for the area of a circle with radius 'r'?",
+      "answers": {
+        "a": "πr^2",
+        "b": "2πr",
+        "c": "πr",
+        "d": "2r"
+      },
+      "explanations": {
+        "a": "Correct. The area of a circle is Pi times the radius squared.",
+        "b": "Incorrect. This is the formula for the circumference of a circle.",
+        "c": "Incorrect. This is not a valid formula.",
+        "d": "Incorrect. This is the diameter of a circle."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What does Pi (π) represent?",
+      "answers": {
+        "a": "The ratio of a circle's circumference to its diameter",
+        "b": "The area of a circle",
+        "c": "The circumference of a circle",
+        "d": "The diameter of a circle"
+      },
+      "explanations": {
+        "a": "Correct. Pi is the constant ratio of a circle's circumference to its diameter.",
+        "b": "Incorrect. The area of a circle is πr^2.",
+        "c": "Incorrect. The circumference of a circle is 2πr.",
+        "d": "Incorrect. The diameter is the distance across a circle through its center."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the fundamental idea behind the Monte Carlo method?",
+      "answers": {
+        "a": "Using random sampling to obtain numerical results",
+        "b": "Solving equations algebraically",
+        "c": "Using calculus to find areas",
+        "d": "Measuring physical objects"
+      },
+      "explanations": {
+        "a": "Correct. The Monte Carlo method uses randomness to solve problems.",
+        "b": "Incorrect. The Monte Carlo method is a numerical method, not an algebraic one.",
+        "c": "Incorrect. While it can be used for integration, its core idea is random sampling.",
+        "d": "Incorrect. The Monte Carlo method is a computational technique."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "If you throw a dart at a board, what does the probability of hitting a certain area depend on?",
+      "answers": {
+        "a": "The size of the area",
+        "b": "The color of the area",
+        "c": "The position of the area",
+        "d": "The shape of the area"
+      },
+      "explanations": {
+        "a": "Correct. The larger the area, the higher the probability of hitting it.",
+        "b": "Incorrect. The color does not affect the probability.",
+        "c": "Incorrect. Assuming the throw is random, the position does not matter.",
+        "d": "Incorrect. While related to size, the size is the direct factor."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "In the experiment, the ratio of points inside the circle to the total points is an approximation of what?",
+      "answers": {
+        "a": "The ratio of the circle's area to the square's area",
+        "b": "The value of Pi",
+        "c": "The area of the circle",
+        "d": "The area of the square"
+      },
+      "explanations": {
+        "a": "Correct. This ratio of areas is equal to π/4.",
+        "b": "Incorrect. The ratio approximates π/4, not π directly.",
+        "c": "Incorrect. The ratio is of two areas.",
+        "d": "Incorrect. The ratio is of two areas."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "How does the number of random points generated affect the accuracy of the estimated value of Pi?",
+      "answers": {
+        "a": "More points generally lead to a more accurate estimation",
+        "b": "Fewer points generally lead to a more accurate estimation",
+        "c": "The number of points does not affect the accuracy",
+        "d": "The accuracy depends on the size of the points"
+      },
+      "explanations": {
+        "a": "Correct. According to the law of large numbers, more samples lead to a better approximation.",
+        "b": "Incorrect. Fewer points lead to a less accurate estimation.",
+        "c": "Incorrect. The number of points is crucial for accuracy.",
+        "d": "Incorrect. The size of the points is not a factor in the simulation."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "If 1000 points are generated and 785 fall inside the circle, what is the estimated value of Pi?",
+      "answers": {
+        "a": "3.14",
+        "b": "3.14159",
+        "c": "3.142",
+        "d": "3.1"
+      },
+      "explanations": {
+        "a": "Correct. The calculation is 4 * (785 / 1000) = 3.14.",
+        "b": "Incorrect. This is the actual value of Pi, not the estimate from the data.",
+        "c": "Incorrect. Check your calculation.",
+        "d": "Incorrect. Check your calculation."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "Besides calculating Pi, what is another potential application of the Monte Carlo method?",
+      "answers": {
+        "a": "Simulating financial markets",
+        "b": "Solving quadratic equations",
+        "c": "Building a bridge",
+        "d": "Baking a cake"
+      },
+      "explanations": {
+        "a": "Correct. Monte Carlo methods are widely used in finance to model stock prices and other financial instruments. <a href='https://en.wikipedia.org/wiki/Monte_Carlo_methods_in_finance' target='_blank'>Read more here.</a>",
+        "b": "Incorrect. Quadratic equations have deterministic solutions.",
+        "c": "Incorrect. Bridge building is an engineering problem, not a typical application of Monte Carlo methods.",
+        "d": "Incorrect. Baking is a chemical process, not a computational one."
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    }
+  ]
+}

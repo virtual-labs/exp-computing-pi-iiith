@@ -1,0 +1,7 @@
+
+/home/runner/work/exp-computing-pi-iiith/exp-computing-pi-iiith/experiment/simulation/script.js
+  164:40  warning  Promise executor functions should not be async  no-async-promise-executor
+  240:40  warning  Promise executor functions should not be async  no-async-promise-executor
+
+✖ 2 problems (0 errors, 2 warnings)
+
