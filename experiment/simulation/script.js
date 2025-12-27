@@ -66,10 +66,15 @@
                 const svg = document.getElementById('riemannSvg');
                 if (!svg) return;
                 
+                // Use viewBox for responsive scaling
                 const width = 400, height = 400;
                 const margin = 40;
                 const graphWidth = width - 2 * margin;
                 const graphHeight = height - 2 * margin;
+                
+                // Set viewBox for responsive SVG
+                svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+                svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
                 
                 const curvePoints = [];
                 for (let i = 0; i <= 100; i++) {
@@ -1709,24 +1714,4 @@ PRODUCTION CONSIDERATIONS:
                     return;
                 }
             });
-        });
-
-        // Mobile orientation handling
-        function checkOrientation() {
-            const overlay = document.querySelector('.rotate-device-overlay');
-            const isMobile = window.innerWidth < 768;
-            const isPortrait = window.innerHeight > window.innerWidth;
-            
-            if (isMobile && isPortrait) {
-                overlay.style.display = 'flex';
-            } else {
-                overlay.style.display = 'none';
-            }
-        }
-
-        // Check orientation on load and resize
-        window.addEventListener('load', checkOrientation);
-        window.addEventListener('resize', checkOrientation);
-        window.addEventListener('orientationchange', () => {
-            setTimeout(checkOrientation, 100);
         });
