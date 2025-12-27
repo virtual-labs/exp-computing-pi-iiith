@@ -452,6 +452,7 @@
 
         .process-grid {
             display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
             gap: 12px;
             margin-bottom: 20px;
         }
@@ -464,6 +465,7 @@
             border: 2px solid #e2e8f0;
             transition: all 0.5s ease;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            min-width: 0;
         }
 
         .process-node.sending {
@@ -752,6 +754,7 @@
         #experimentContent {
             width: 100%;
             height: calc(100vh - 300px);
+            min-height: 300px;
             position: relative;
             border-radius: 12px;
             background: white;
@@ -766,12 +769,16 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 15px;
         }
 
         .pi-circle {
             position: relative;
-            width: 350px;
-            height: 350px;
+            width: min(350px, 90vw, calc(100% - 20px));
+            height: min(350px, 90vw, calc(100% - 20px));
+            max-width: 350px;
+            max-height: 350px;
+            aspect-ratio: 1;
             border: 3px solid #3b82f6;
             background: white;
             border-radius: 8px;
@@ -815,11 +822,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 15px;
         }
 
         .riemann-graph {
-            width: 400px;
-            height: 400px;
+            width: min(400px, 90vw, calc(100% - 20px));
+            height: min(400px, 90vw, calc(100% - 20px));
+            max-width: 400px;
+            max-height: 400px;
+            aspect-ratio: 1;
             position: relative;
             background: white;
             border-radius: 8px;
@@ -890,239 +901,12 @@
             50% { box-shadow: 0 0 30px rgba(59, 130, 246, 0.6); }
         }
 
+        /* ========================================
+           RESPONSIVE DESIGN - TABLET (1200px and below)
+           ======================================== */
         @media (max-width: 1200px) {
             .app-container {
-                grid-template-columns: 1fr;
-                grid-template-rows: 80px 1fr auto auto;
-                height: 100vh;
-                gap: 10px;
-                padding: 10px;
-            }
-            
-            .controls-panel {
-                height: 300px;
-                order: 2;
-            }
-            
-            .experiment-area {
-                order: 1;
-                min-height: 400px;
-            }
-            
-            .observations-panel {
-                height: 250px;
-                order: 3;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 1.5em;
-            }
-            
-            .control-group {
-                padding: 12px;
-            }
-            
-            .btn {
-                padding: 8px 12px;
-                font-size: 12px;
-            }
-        }
-        
-        /* Mobile Landscape Support - Desktop-like Experience */
-        @media screen and (max-width: 968px) and (orientation: landscape) {
-            .app-container {
                 grid-template-columns: 280px 1fr 300px;
-                grid-template-rows: 60px 1fr;
-                gap: 10px;
-                padding: 10px;
-            }
-            
-            .header {
-                padding: 0 15px;
-            }
-            
-            .header h1 {
-                font-size: 1.4em;
-            }
-            
-            .controls-panel {
-                padding: 15px;
-                height: calc(100vh - 80px);
-            }
-            
-            .observations-panel {
-                padding: 15px;
-                height: calc(100vh - 80px);
-            }
-            
-            .control-section {
-                padding: 15px;
-                margin-bottom: 15px;
-            }
-            
-            .control-section h3 {
-                font-size: 1em;
-                margin-bottom: 12px;
-            }
-            
-            .control-group {
-                padding: 12px;
-                margin-bottom: 12px;
-            }
-            
-            .control-group h4 {
-                font-size: 0.9em;
-                margin-bottom: 10px;
-            }
-            
-            .control-item {
-                margin-bottom: 12px;
-            }
-            
-            .control-item label {
-                font-size: 0.8rem;
-                margin-bottom: 6px;
-            }
-            
-            .control-item select {
-                padding: 10px 12px;
-                font-size: 0.8rem;
-            }
-            
-            .btn {
-                padding: 10px 14px;
-                font-size: 0.8rem;
-            }
-            
-            .speed-control {
-                margin-top: 8px;
-            }
-            
-            .speed-slider {
-                height: 6px;
-            }
-            
-            .speed-display span {
-                font-size: 0.8rem;
-            }
-            
-            .simulation-area {
-                padding: 15px;
-            }
-            
-            .process-grid {
-                gap: 10px;
-                margin-bottom: 15px;
-            }
-            
-            .process-node {
-                padding: 12px;
-            }
-            
-            .process-id {
-                font-size: 0.9rem;
-                margin-bottom: 4px;
-            }
-            
-            .process-status {
-                font-size: 0.75rem;
-            }
-            
-            .status-section {
-                padding: 12px;
-                margin-bottom: 12px;
-            }
-            
-            .status-section h4 {
-                font-size: 0.9em;
-                margin-bottom: 10px;
-            }
-            
-            .stat-card {
-                padding: 15px;
-                margin-bottom: 12px;
-            }
-            
-            .stat-value {
-                font-size: 1.4rem;
-                margin-bottom: 4px;
-            }
-            
-            .stat-label {
-                font-size: 0.8rem;
-            }
-            
-            .stat-description {
-                font-size: 0.7rem;
-                margin-top: 3px;
-            }
-            
-            .code-download-card {
-                padding: 15px;
-            }
-            
-            .download-description {
-                font-size: 0.8rem;
-                margin-bottom: 12px;
-            }
-            
-            .download-btn {
-                padding: 10px 14px;
-                font-size: 0.8rem;
-            }
-            
-            .logs-container {
-                height: 250px;
-                font-size: 0.75rem;
-            }
-            
-            .log-entry {
-                padding: 6px 8px;
-                margin-bottom: 4px;
-            }
-            
-            .log-time {
-                font-size: 0.7rem;
-            }
-            
-            .log-message {
-                font-size: 0.75rem;
-            }
-            
-            /* Experiment content optimization */
-            #experimentContent {
-                padding: 10px;
-            }
-            
-            .pi-circle-container {
-                width: 300px;
-                height: 300px;
-                margin: 0 auto;
-            }
-            
-            .riemann-container {
-                width: 350px;
-                margin: 0 auto;
-            }
-            
-            .riemann-svg {
-                width: 350px;
-                height: 350px;
-            }
-            
-            /* Ensure experiment area uses full space */
-            .experiment-area {
-                min-height: calc(100vh - 80px);
-            }
-        }
-        
-        /* Tablet Landscape - Slightly different layout */
-        @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-            .app-container {
-                grid-template-columns: 300px 1fr 320px;
-                grid-template-rows: 70px 1fr;
                 gap: 12px;
                 padding: 12px;
             }
@@ -1133,25 +917,681 @@
             
             .controls-panel,
             .observations-panel {
-                height: calc(100vh - 90px);
+                padding: 15px;
             }
             
-            .pi-circle-container {
+            .control-section {
+                padding: 15px;
+            }
+            
+            .stat-value {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* ========================================
+           RESPONSIVE DESIGN - SMALL TABLET (992px and below)
+           ======================================== */
+        @media (max-width: 992px) {
+            body {
+                overflow-y: auto;
+            }
+            
+            .app-container {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto auto;
+                height: auto;
+                min-height: 100vh;
+                gap: 15px;
+                padding: 15px;
+                overflow: visible;
+            }
+            
+            .header {
+                grid-column: 1;
+                padding: 15px 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.4em;
+            }
+            
+            .controls-panel {
+                height: auto;
+                order: 1;
+            }
+            
+            .experiment-area {
+                order: 2;
+                min-height: 450px;
+            }
+            
+            .observations-panel {
+                height: auto;
+                order: 3;
+            }
+            
+            #experimentContent {
+                height: 400px;
+            }
+            
+            .pi-circle {
+                width: 300px;
+                height: 300px;
+            }
+            
+            .riemann-graph {
                 width: 350px;
                 height: 350px;
             }
-            
-            .riemann-container {
-                width: 400px;
+        }
+
+        /* ========================================
+           RESPONSIVE DESIGN - MOBILE (768px and below)
+           ======================================== */
+        @media (max-width: 768px) {
+            body {
+                overflow-y: auto;
             }
             
-            .riemann-svg {
-                width: 400px;
-                height: 400px;
+            .app-container {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                height: auto;
+                min-height: 100vh;
+                gap: 12px;
+                padding: 10px;
+                border-radius: 0;
+            }
+            
+            .header {
+                padding: 12px 15px;
+                border-radius: 12px;
+                flex-direction: column;
+                gap: 5px;
+                text-align: center;
+            }
+            
+            .header h1 {
+                font-size: 1.3em;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .header > div {
+                font-size: 0.8em !important;
+            }
+            
+            .controls-panel {
+                height: auto;
+                padding: 15px;
+                gap: 15px;
+                border-radius: 12px;
+            }
+            
+            .control-section {
+                padding: 15px;
+                border-radius: 12px;
+            }
+            
+            .control-section h3 {
+                font-size: 1em;
+                margin-bottom: 12px;
+            }
+            
+            .control-group {
+                padding: 12px;
+            }
+            
+            .control-item {
+                margin-bottom: 12px;
+            }
+            
+            .control-item label {
+                font-size: 0.85rem;
+            }
+            
+            .control-item select {
+                padding: 10px 12px;
+                font-size: 0.9rem;
+            }
+            
+            .btn {
+                padding: 12px 16px;
+                font-size: 0.9rem;
+            }
+            
+            .experiment-area {
+                border-radius: 12px;
+                min-height: 380px;
+            }
+            
+            .simulation-area {
+                padding: 15px;
+            }
+            
+            .info-button {
+                top: 10px;
+                right: 10px;
+                width: 36px;
+                height: 36px;
+                font-size: 16px;
+            }
+            
+            .process-grid {
+                gap: 8px;
+                margin-bottom: 15px;
+            }
+            
+            .process-node {
+                padding: 10px;
+                border-radius: 10px;
+            }
+            
+            .process-id {
+                font-size: 0.85rem;
+            }
+            
+            .process-status {
+                font-size: 0.7rem;
+            }
+            
+            #experimentContent {
+                height: 320px;
+                border-radius: 10px;
+            }
+            
+            .pi-circle {
+                width: 260px;
+                height: 260px;
+            }
+            
+            .riemann-graph {
+                width: 280px;
+                height: 280px;
+            }
+            
+            .observations-panel {
+                height: auto;
+                padding: 15px;
+                gap: 12px;
+                border-radius: 12px;
+            }
+            
+            .status-section {
+                padding: 12px;
+                border-radius: 10px;
+            }
+            
+            .status-section h4 {
+                font-size: 0.95em;
+                margin-bottom: 10px;
+            }
+            
+            .stat-card {
+                padding: 15px;
+                margin-bottom: 10px;
+                border-radius: 10px;
+            }
+            
+            .stat-value {
+                font-size: 1.4rem;
+            }
+            
+            .stat-label {
+                font-size: 0.85rem;
+            }
+            
+            .stat-description {
+                font-size: 0.7rem;
+            }
+            
+            .logs-container {
+                max-height: 150px;
+                padding: 10px;
+            }
+            
+            .log-entry {
+                font-size: 0.75rem;
+            }
+            
+            .log-time {
+                min-width: 60px;
+                font-size: 0.7rem;
+            }
+            
+            .code-download-card {
+                padding: 15px;
+            }
+            
+            .download-description {
+                font-size: 0.85rem;
+            }
+            
+            .download-btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .intermediate-values-container {
+                max-height: 200px;
+            }
+            
+            /* Info Modal Mobile Styles */
+            .info-modal-content {
+                width: 95%;
+                max-height: 85vh;
+                border-radius: 15px;
+            }
+            
+            .info-modal-header {
+                padding: 15px 20px;
+            }
+            
+            .info-modal-header h2 {
+                font-size: 1.2rem;
+            }
+            
+            .feature-section {
+                padding: 15px;
+            }
+            
+            .feature-section h3 {
+                font-size: 1rem;
+            }
+            
+            .feature-section li {
+                font-size: 0.9rem;
             }
         }
-        
-        /* Mobile Portrait Orientation Overlay */
+
+        /* ========================================
+           RESPONSIVE DESIGN - SMALL MOBILE (480px and below)
+           ======================================== */
+        @media (max-width: 480px) {
+            .app-container {
+                padding: 8px;
+                gap: 10px;
+            }
+            
+            .header {
+                padding: 10px 12px;
+            }
+            
+            .header h1 {
+                font-size: 1.1em;
+            }
+            
+            .header > div {
+                font-size: 0.75em !important;
+            }
+            
+            .controls-panel {
+                padding: 12px;
+                gap: 12px;
+            }
+            
+            .control-section {
+                padding: 12px;
+            }
+            
+            .control-section h3 {
+                font-size: 0.95em;
+            }
+            
+            .control-group {
+                padding: 10px;
+            }
+            
+            .control-item select {
+                padding: 8px 10px;
+                font-size: 0.85rem;
+            }
+            
+            .btn {
+                padding: 10px 14px;
+                font-size: 0.85rem;
+            }
+            
+            .experiment-area {
+                min-height: 320px;
+            }
+            
+            .simulation-area {
+                padding: 10px;
+            }
+            
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 6px;
+            }
+            
+            .process-node {
+                padding: 8px;
+            }
+            
+            .process-id {
+                font-size: 0.75rem;
+            }
+            
+            .process-status {
+                font-size: 0.65rem;
+            }
+            
+            #experimentContent {
+                height: 280px;
+            }
+            
+            .pi-circle {
+                width: 220px;
+                height: 220px;
+            }
+            
+            .riemann-graph {
+                width: 240px;
+                height: 240px;
+            }
+            
+            .observations-panel {
+                padding: 12px;
+            }
+            
+            .status-section {
+                padding: 10px;
+            }
+            
+            .stat-card {
+                padding: 12px;
+            }
+            
+            .stat-value {
+                font-size: 1.2rem;
+            }
+            
+            .stat-label {
+                font-size: 0.8rem;
+            }
+            
+            .logs-container {
+                max-height: 120px;
+                padding: 8px;
+            }
+            
+            .speed-slider {
+                height: 5px;
+            }
+            
+            .speed-slider::-webkit-slider-thumb {
+                width: 16px;
+                height: 16px;
+            }
+            
+            .speed-display {
+                padding: 6px;
+            }
+            
+            .speed-display span {
+                font-size: 0.8rem;
+            }
+            
+            /* Info Modal Small Mobile */
+            .info-modal-content {
+                width: 98%;
+                max-height: 90vh;
+                margin: 5px;
+            }
+            
+            .info-modal-header {
+                padding: 12px 15px;
+            }
+            
+            .info-modal-header h2 {
+                font-size: 1rem;
+            }
+            
+            .close-button {
+                width: 26px;
+                height: 26px;
+                font-size: 20px;
+            }
+            
+            .feature-section {
+                padding: 12px;
+            }
+            
+            .feature-section h3 {
+                font-size: 0.95rem;
+            }
+            
+            .feature-section li {
+                font-size: 0.85rem;
+                margin: 6px 0;
+            }
+            
+            .feature-section ul,
+            .feature-section ol {
+                padding-left: 15px;
+            }
+        }
+
+        /* ========================================
+           RESPONSIVE DESIGN - LANDSCAPE MOBILE
+           ======================================== */
+        @media screen and (max-width: 896px) and (orientation: landscape) {
+            body {
+                overflow-y: auto;
+            }
+            
+            .app-container {
+                grid-template-columns: 250px 1fr 280px;
+                grid-template-rows: 55px 1fr;
+                height: auto;
+                min-height: 100vh;
+                gap: 8px;
+                padding: 8px;
+            }
+            
+            .header {
+                padding: 0 12px;
+            }
+            
+            .header h1 {
+                font-size: 1.2em;
+            }
+            
+            .header > div {
+                font-size: 0.75em !important;
+            }
+            
+            .controls-panel {
+                padding: 10px;
+                height: auto;
+                min-height: calc(100vh - 75px);
+                gap: 10px;
+            }
+            
+            .observations-panel {
+                padding: 10px;
+                height: auto;
+                min-height: calc(100vh - 75px);
+            }
+            
+            .control-section {
+                padding: 10px;
+            }
+            
+            .control-section h3 {
+                font-size: 0.9em;
+                margin-bottom: 8px;
+            }
+            
+            .control-group {
+                padding: 8px;
+                margin-bottom: 8px;
+            }
+            
+            .control-item {
+                margin-bottom: 8px;
+            }
+            
+            .control-item label {
+                font-size: 0.75rem;
+                margin-bottom: 4px;
+            }
+            
+            .control-item select {
+                padding: 6px 8px;
+                font-size: 0.75rem;
+            }
+            
+            .btn {
+                padding: 8px 12px;
+                font-size: 0.75rem;
+            }
+            
+            .simulation-area {
+                padding: 10px;
+            }
+            
+            .process-grid {
+                gap: 6px;
+                margin-bottom: 10px;
+            }
+            
+            .process-node {
+                padding: 6px;
+            }
+            
+            .process-id {
+                font-size: 0.7rem;
+            }
+            
+            .process-status {
+                font-size: 0.6rem;
+            }
+            
+            #experimentContent {
+                height: calc(100vh - 180px);
+                min-height: 250px;
+            }
+            
+            .pi-circle {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .riemann-graph {
+                width: 220px;
+                height: 220px;
+            }
+            
+            .status-section {
+                padding: 8px;
+                margin-bottom: 8px;
+            }
+            
+            .status-section h4 {
+                font-size: 0.8em;
+                margin-bottom: 6px;
+            }
+            
+            .stat-card {
+                padding: 10px;
+                margin-bottom: 8px;
+            }
+            
+            .stat-value {
+                font-size: 1.1rem;
+            }
+            
+            .stat-label {
+                font-size: 0.7rem;
+            }
+            
+            .stat-description {
+                font-size: 0.6rem;
+            }
+            
+            .logs-container {
+                max-height: 100px;
+                padding: 6px;
+            }
+            
+            .log-entry {
+                font-size: 0.65rem;
+                margin-bottom: 4px;
+            }
+            
+            .log-time {
+                min-width: 50px;
+                font-size: 0.6rem;
+            }
+            
+            .code-download-card {
+                padding: 10px;
+            }
+            
+            .download-description {
+                font-size: 0.75rem;
+                margin-bottom: 8px;
+            }
+            
+            .download-btn {
+                padding: 6px 12px;
+                font-size: 0.75rem;
+            }
+            
+            .intermediate-values-container {
+                max-height: 120px;
+            }
+            
+            .speed-display {
+                padding: 4px;
+            }
+            
+            .speed-display span {
+                font-size: 0.7rem;
+            }
+        }
+
+        /* ========================================
+           RESPONSIVE DESIGN - TABLET LANDSCAPE
+           ======================================== */
+        @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+            .app-container {
+                grid-template-columns: 270px 1fr 300px;
+                grid-template-rows: 65px 1fr;
+                gap: 10px;
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 1.5em;
+            }
+            
+            .controls-panel,
+            .observations-panel {
+                height: calc(100vh - 85px);
+            }
+            
+            .pi-circle {
+                width: 280px;
+                height: 280px;
+            }
+            
+            .riemann-graph {
+                width: 300px;
+                height: 300px;
+            }
+            
+            #experimentContent {
+                height: calc(100vh - 200px);
+            }
+        }
+
+        /* ========================================
+           ROTATE DEVICE OVERLAY (Optional - now hidden by default)
+           ======================================== */
         .rotate-device-overlay {
             display: none;
             position: fixed;
@@ -1194,12 +1634,70 @@
             75% { transform: rotate(15deg); }
         }
 
-        @media screen and (max-width: 768px) and (orientation: portrait) {
-            .rotate-device-overlay {
-                display: flex !important;
+        /* ========================================
+           TOUCH DEVICE OPTIMIZATIONS
+           ======================================== */
+        @media (hover: none) and (pointer: coarse) {
+            .btn:hover,
+            .stat-card:hover,
+            .code-download-card:hover,
+            .download-btn:hover,
+            .info-button:hover {
+                transform: none;
+            }
+            
+            .btn:active,
+            .download-btn:active,
+            .info-button:active {
+                transform: scale(0.98);
+            }
+            
+            .control-item select {
+                min-height: 44px;
+            }
+            
+            .btn {
+                min-height: 44px;
+            }
+            
+            .download-btn {
+                min-height: 44px;
+            }
+        }
+
+        /* ========================================
+           HIGH DPI / RETINA DISPLAY OPTIMIZATIONS
+           ======================================== */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .pi-point {
+                width: 2px;
+                height: 2px;
+            }
+        }
+
+        /* ========================================
+           PRINT STYLES
+           ======================================== */
+        @media print {
+            body {
+                background: white;
             }
             
             .app-container {
-                display: none !important;
+                display: block;
+                height: auto;
+                box-shadow: none;
+            }
+            
+            .controls-panel,
+            .observations-panel {
+                height: auto;
+                page-break-inside: avoid;
+            }
+            
+            .btn,
+            .download-btn,
+            .info-button {
+                display: none;
             }
         }
